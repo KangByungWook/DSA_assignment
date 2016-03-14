@@ -62,7 +62,7 @@ int fight(member* my_team_member, member* enemy_team_member){
     }
     // 무승부 조건
     else if(my_team_member->weapon == enemy_team_member->weapon){
-        printf("무승부입니다");
+        printf("무승부입니다\n");
         return 0;
     }
     // 이기거나 비기는 경우를 제외한 나머지는 패배

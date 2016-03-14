@@ -45,6 +45,8 @@ int main(int argc, const char * argv[]) {
         (enemy_team_array_p+i)->num = i;
         (enemy_team_array_p+i)->islive = 1;
     }
+    // 우리 팀의 생성 현형 보기
+    print_status(my_team_array_p, member_number);
 
     while(find_alive_member_number(my_team_array_p, member_number) != -1 && find_alive_member_number(enemy_team_array_p, member_number) != -1 ){
         printf("현재 플레이어 : %d || 누구와 싸우시겠습니까? : ", find_alive_member_number(my_team_array_p, member_number));
@@ -57,6 +59,9 @@ int main(int argc, const char * argv[]) {
         
     }
     
+    // 메모리 해제
+    free(my_team_array_p);
+    free(enemy_team_array_p);
     return 0;
 }
 
