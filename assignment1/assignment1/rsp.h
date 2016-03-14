@@ -29,17 +29,6 @@ void print_status(member* team_array_p, int array_num){
     }
 };
 
-member* create_new_team(char* team_name, int member_num){
-    member* tmp_member_array_p = (member*)malloc(member_num*sizeof(team_name));
-    for(int i = 0 ; i < member_num ; i++){
-        (*(tmp_member_array_p+i)).team = team_name;
-        (*(tmp_member_array_p+i)).num = i;
-        (*(tmp_member_array_p+i)).weapon = rand()%3+1;
-        (*(tmp_member_array_p+i)).islive = 1;
-    }
-    return tmp_member_array_p;
-}
-
 // 리턴값: -1(패배), 0(무승부), 1(승리)
 int fight(member* my_team_member, member* enemy_team_member){
     srand(time(NULL));
@@ -63,6 +52,9 @@ int fight(member* my_team_member, member* enemy_team_member){
     // 무승부 조건
     else if(my_team_member->weapon == enemy_team_member->weapon){
         printf("무승부입니다\n");
+        my_team_member->weapon = rand()%3+1;
+        enemy_team_member->weapon = rand()%3+1;
+        printf("당신의 플레이어 %d는 새로운 무기 %d를 얻었습니다.\n",my_team_member->num,my_team_member->weapon);
         return 0;
     }
     // 이기거나 비기는 경우를 제외한 나머지는 패배

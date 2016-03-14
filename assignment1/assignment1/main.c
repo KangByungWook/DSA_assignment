@@ -13,7 +13,6 @@
 
 
 void print_status(member team_array[], int array_num);
-member* create_new_team(char* team_name, int member_num);
 int fight(member* my_team_member, member* enemy_team_member);
 int find_alive_member_number(member* member_array_p, int member_num);
 
@@ -48,15 +47,18 @@ int main(int argc, const char * argv[]) {
     // 우리 팀의 생성 현형 보기
     print_status(my_team_array_p, member_number);
 
+    // 우리팀 또는 상대팀이 모두 전멸하기 전까지는 공격대상 입력을 받는다
     while(find_alive_member_number(my_team_array_p, member_number) != -1 && find_alive_member_number(enemy_team_array_p, member_number) != -1 ){
         printf("현재 플레이어 : %d || 누구와 싸우시겠습니까? : ", find_alive_member_number(my_team_array_p, member_number));
         scanf("%d", &target_enemy_num);
-        if((enemy_team_array_p+target_enemy_num)->islive != 1){
-            printf("해당 상대는 이미 죽었습니다\n");
-        }
-        else
+        if((enemy_team_array_p+target_enemy_num)->islive == 1){
             fight(my_team_array_p+find_alive_member_number(my_team_array_p, member_number), enemy_team_array_p+target_enemy_num);
-        
+
+        }
+        else if(target_enemy_num >= member_number || target_enemy_num < 0)
+            printf("해당 상대는 존재하지 않습니다\n");
+        else
+            printf("해당 상대는 이미 죽었습니다\n");
     }
     
     // 메모리 해제
