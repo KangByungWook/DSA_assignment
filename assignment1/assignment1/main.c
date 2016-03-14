@@ -15,10 +15,11 @@
 void print_status(member team_array[], int array_num);
 member* create_new_team(char* team_name, int member_num);
 int fight(member* my_team_member, member* enemy_team_member);
+int find_alive_member_number(member* member_array_p, int member_num);
 
 int main(int argc, const char * argv[]) {
     char my_team_name[200], enemy_team_name[200];
-    int member_number;
+    int member_number, target_enemy_num;
     
     // 난수 생성을 위한 시드 생성
     srand(time(NULL));
@@ -44,12 +45,18 @@ int main(int argc, const char * argv[]) {
         (enemy_team_array_p+i)->num = i;
         (enemy_team_array_p+i)->islive = 1;
     }
+
+    while(find_alive_member_number(my_team_array_p, member_number) != -1 && find_alive_member_number(enemy_team_array_p, member_number) != -1 ){
+        printf("현재 플레이어 : %d || 누구와 싸우시겠습니까? : ", find_alive_member_number(my_team_array_p, member_number));
+        scanf("%d", &target_enemy_num);
+        if((enemy_team_array_p+target_enemy_num)->islive != 1){
+            printf("해당 상대는 이미 죽었습니다\n");
+        }
+        else
+            fight(my_team_array_p+find_alive_member_number(my_team_array_p, member_number), enemy_team_array_p+target_enemy_num);
+        
+    }
     
-    print_status(my_team_array_p, member_number);
-    print_status(enemy_team_array_p, member_number);
-    fight(my_team_array_p, enemy_team_array_p);
-    print_status(my_team_array_p, member_number);
-    print_status(enemy_team_array_p, member_number);
     return 0;
 }
 
