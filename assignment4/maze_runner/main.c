@@ -1,18 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include "stack.h"
 #include "maze.h"
 
 int main(){
 	int i, j, move_status;
 	
-	print_maze_map(maze_map_original, 10, 10, 3, 3);
-	
 	printf("미로찾기를 시작합니다\n");
-	
+	Sleep(3000);
+	system("cls");
+		
 	// 시작 위치 세팅 
 	trace start = {1,1,0};
 	maze_map[start.row][start.col] = 1;
+	print_maze_map(maze_map_original, 10, 10, 1, 1);
+	Sleep(300);
+	system("cls");
 	Push(&top, start);
 	
 	do{
@@ -22,9 +26,6 @@ int main(){
 	
 	if(isEmpty(stack)){
 		printf("도저히 방법이 없습니다\n");
-	}
-	else{
-		printf("게임을 무사히 마쳤습니다.\n");
 	}
 	
 	return 0;	
