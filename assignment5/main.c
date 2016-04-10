@@ -12,7 +12,5 @@ int main(){
 	prefix_to_postfix(cmd);
 	printf("%s\n", postFix);
 	printf("계산결과 : %f\n", calculate_postfix(postFix));
-	
-	
 	return 0;
 }
