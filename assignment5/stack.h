@@ -7,7 +7,7 @@ typedef struct element{
 	// postFix연산시에 숫자값을 넣을 변수 
 	float fnum;
 	
-	// preFix를 postFix로 변환할때 읽어온 문자열 값을 넣을 변수 
+	// infix를 postFix로 변환할때 읽어온 문자열 값을 넣을 변수 
 	char oper[20];
 	
 	// oper가 연산자인 경우 해당 연산자의 우선순위 
@@ -59,7 +59,6 @@ int Push(int *ptop, element item){
     int isfull = 0;
     isfull = isFull(stack);
     if(isfull == 1){
-        printf("스택이 꽉 찼습니다\n");
         return 0;
     }
     else{
@@ -73,7 +72,6 @@ int Push(int *ptop, element item){
 int Pop(int *ptop){
     int isempty = isEmpty(stack);
     if(isempty == 1){
-        printf("스택이 비어있습니다\n");
         return 0;
     }
     else{

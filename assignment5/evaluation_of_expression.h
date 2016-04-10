@@ -10,7 +10,7 @@
 #define FALSE 0
 
 
-//postFix : prefix에서 변환된 postfix 문자열이 저장되는 주소 
+//postFix : infix에서 변환된 postfix 문자열이 저장되는 주소 
 char postFix[100];
 //postFix 문자열을 읽어올때 사용하는 인덱스, 읽어오는 문자가 문자열의 어디에 위치해있는지 알려주는 인덱스. 
 int postFixBuffIndex = 0;
@@ -32,8 +32,8 @@ int is_operator(char *str){
 }
 
 
-// prefix형태의 문자열을 받아서 postFix로 바꿔주고 postFix문자열의 시작 주소를 반환해주는 함수 
-char* prefix_to_postfix(char *str){
+// infix형태의 문자열을 받아서 postFix로 바꿔주고 postFix문자열의 시작 주소를 반환해주는 함수 
+char* infix_to_postfix(char *str){
 	// 연산자 또는 피연산자를 저장해놓을 임시 문자열 변수 
 	char tmp[100];
 	int num_of_char, len, i, start_index;
@@ -243,9 +243,46 @@ float calculate_postfix(char *str){
         	Push(&top, newElement);
         }
     }
-    // result : 스택에 남아있는 하나의 element의 fnum 
+    // 마지막 남아있는 스택을 제거. 
+    Pop(&top);
+    
+    // result : 스택에 마지막으로 남아있던 하나의 element의 fnum 
     // result를 반환한다. 
     return result;
 }
 
+// 입력받은 infix 식을 검증하는 함수
+// 식에 문제가 없다면 -1을 리턴
+// 문제가 있다면 문제가 있는 부분의 index를 리턴 
+int equation_validation(char *equation){
+	int i, not_valid_index = -1;
+	
+	// 문자열을 한칸씩 옮겨다니며 유효한 문자가 입력되었는지 체크 
+	for(i = 0; i < strlen(equation); i++){
+		// 숫자인지 검증 
+		if('0' <= equation[i] &&equation[i] <= '9')continue;
+		
+		// 연산자 또는 괄호인지 검증 
+		if(equation[i] == '*' || equation[i] == '/' || equation[i] == '+' || equation[i] == '-' || equation[i] == '(' || equation[i] == ')')continue;
+		
+		// AND인지 검증 
+		if(equation[i] == 'A'){
+			if(equation[i+1] == 'N' && equation[i+2] == 'D'){
+				i = i+2;
+				continue;	
+			}
+		}
+		
+		//OR인지 검증 
+		if(equation[i] == 'O'){
+			if(equation[i+1] == 'R'){
+				i++;
+				continue;	
+			}
+		}
+		not_valid_index = i;
+		break;
+	}
+	return not_valid_index;
+}
 #endif
