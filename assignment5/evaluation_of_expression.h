@@ -6,6 +6,8 @@
 #include <string.h>
 #include "stack.h"
 
+#define TRUE 1
+#define FALSE 0
 
 
 //postFix : prefix에서 변환된 postfix 문자열이 저장되는 주소 
@@ -22,6 +24,12 @@ int get_precedence(char *oper){
 	else if(*oper == '(' || *oper == ')') return 4;
 	else return -1;
 }
+
+int is_operator(char *str){
+	if(*str == '+' || *str == '-' || *str == '*' || *str == '/' || *str == '(' || *str == ')' || *str == 'A' || *str == 'O')return TRUE;
+	else return FALSE;
+}
+
 
 char* prefix_to_postfix(char *str){
 	char tmp[100];
@@ -47,7 +55,7 @@ char* prefix_to_postfix(char *str){
 			strcat(postFix, tmp);
 			strcat(postFix, " ");
 			
-			printf("%d", atoi(tmp));
+			//printf("%d", atoi(tmp));
         }
         //연산자인 경우  
         else{
@@ -55,7 +63,7 @@ char* prefix_to_postfix(char *str){
 			while(('0'> str[i+1] || str[i+1] > '9') && str[i+1] != ' '){
 				// 그러나 )* 와 같은 경우는 각각이 하나이므로 따로 처리.
 				// 즉 하나로 보면 안됨 
-        		if(str[i+1] == '*' || str[i+1] == '/' || str[i+1] == '+' || str[i+1] == '-' || str[i+1] == '(' || str[i+1] == ')')break;
+        		if(is_operator(str+i+1))break;
         		
         		num_of_char++;
         		i++;
@@ -68,7 +76,7 @@ char* prefix_to_postfix(char *str){
         		
         		// "(" 또는 ")"인 경우 postFix에 반영하지 않는다. 
         		if(strcmp(stack[top].oper, ")") && strcmp(stack[top].oper, "(")){
-        			printf("%s", stack[top].oper);	
+        			//printf("%s", stack[top].oper);	
 					strcat(postFix, stack[top].oper);
 					strcat(postFix, " ");	
 				}
@@ -87,7 +95,7 @@ char* prefix_to_postfix(char *str){
     while(!isEmpty(stack)){
     	// "(" 또는 ")"인 경우 postFix에 반영하지 않는다. 
 		if(strcmp(stack[top].oper, ")") && strcmp(stack[top].oper, "(")){
-			printf("%s", stack[top].oper);	
+			//printf("%s", stack[top].oper);	
 			strcat(postFix, stack[top].oper);
 			strcat(postFix, " ");	
 		}
@@ -135,7 +143,7 @@ float calculate_postfix(char *str){
 			while(('0'> str[i+1] || str[i+1] > '9') && str[i+1] != ' '){
 				// 그러나 )* 와 같은 경우는 각각이 하나이므로 따로 처리.
 				// 즉 하나로 보면 안됨 
-        		if(str[i+1] == '*' || str[i+1] == '/' || str[i+1] == '+' || str[i+1] == '-' || str[i+1] == '(' || str[i+1] == ')')break;
+        		if(is_operator(str+i+1))break;
         		
         		num_of_char++;
         		i++;
