@@ -18,7 +18,7 @@ int postFixBuffIndex = 0;
 // 연산자를 매개변수로 받아서 우선순위를 반환해주는 함수. 
 int get_precedence(char *oper){
 	if(*oper == ')') return 0; // 닫는 괄호 : 우선순위 0 
-	else if(!strcmp(oper, "AND") || !strcmp(oper, "OR"))return 1; // AND 또는 OR인 경우 우선순위 1 
+	else if(!strcmp(oper, "&&") || !strcmp(oper, "||"))return 1; // AND 또는 OR인 경우 우선순위 1 
 	else if(*oper == '+' || *oper == '-') return 2; // + 또는 - 인 경우 우선순위 2 
 	else if(*oper == '*' || *oper == '/') return 3; // * 또는 / 인 경우 우선순위 3 
 	else if(*oper == '(') return 4; //  여는 괄호 : 우선순위 4, 들어갈때는 4로 들어가지만 들어간 이후로는 우선순위가 0으로 떨어짐. 
@@ -234,8 +234,8 @@ float calculate_postfix(char *str){
         	else if(!strcmp(tmp, "-"))result = first_operand-second_operand;
         	else if(!strcmp(tmp, "*"))result = first_operand*second_operand;
         	else if(!strcmp(tmp, "/"))result = first_operand/second_operand;
-        	else if(!strcmp(tmp,"AND"))result = first_operand && second_operand;
-			else if(!strcmp(tmp,"OR"))result = first_operand || second_operand;
+        	else if(!strcmp(tmp,"&&"))result = first_operand && second_operand;
+			else if(!strcmp(tmp,"||"))result = first_operand || second_operand;
 			
 			// newElement의 fnum에 결과값을 넣어서 
         	newElement.fnum = result;
@@ -265,17 +265,17 @@ int equation_validation(char *equation){
 		// 연산자 또는 괄호인지 검증 
 		if(equation[i] == '*' || equation[i] == '/' || equation[i] == '+' || equation[i] == '-' || equation[i] == '(' || equation[i] == ')')continue;
 		
-		// AND인지 검증 
-		if(equation[i] == 'A'){
-			if(equation[i+1] == 'N' && equation[i+2] == 'D'){
-				i = i+2;
+		//AND인지 검증 
+		if(equation[i] == '&'){
+			if(equation[i+1] == '&'){
+				i++;
 				continue;	
 			}
 		}
 		
 		//OR인지 검증 
-		if(equation[i] == 'O'){
-			if(equation[i+1] == 'R'){
+		if(equation[i] == '|'){
+			if(equation[i+1] == '|'){
 				i++;
 				continue;	
 			}
