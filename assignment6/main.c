@@ -12,5 +12,8 @@ int main(){
 	printf("postFix에 저장된 값 : %s", postFix);
 	node_ptr tmp = make_tree(postFix);
 	
-	inorder_traversal(tmp);
+	printf("Pretorder traversal : ");preorder_traversal(tmp);printf("\n");
+	printf("Inorder traversal : ");inorder_traversal(tmp);printf("\n");
+	printf("Postorder traversal : ");postorder_traversal(tmp);printf("\n");
+	
 	}
