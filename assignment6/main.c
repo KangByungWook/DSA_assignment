@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "stack.h"
 #include "eval_expression.h"
 #include "eval_expression_tree.h"
@@ -15,5 +14,5 @@ int main(){
 	printf("Pretorder traversal : ");preorder_traversal(tmp);printf("\n");
 	printf("Inorder traversal : ");inorder_traversal(tmp);printf("\n");
 	printf("Postorder traversal : ");postorder_traversal(tmp);printf("\n");
-	
+	printf("Evaluation test : %f", tmp->result);
 	}
