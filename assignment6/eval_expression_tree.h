@@ -95,7 +95,7 @@ node_ptr make_tree(char* postfix){
 				// 상위 노드에 자식노드의 result값을 연산한 결과값을 넣는다 
 				oper_node->result = compute_oper(*p_index, oper_node->left_child->result, rhs - 48);
 				
-				push('N', &top);
+				
 				// 생성한 노드 포인터를 노드스택에 push한다 
 				node_stack_push(oper_node,&node_ptr_stack_top);
 			}
@@ -111,7 +111,7 @@ node_ptr make_tree(char* postfix){
 				// 자식노드로부터 가져온 result를 해당 연산자로 수행한후 결과값을 저장한다 
 				oper_node->result = compute_oper(*p_index, oper_node->left_child->result, oper_node->right_child->result);
 				
-				push('N', &top);
+				
 				// 새로 생성한 노드의 포인터면수를  노드 스택에 push해준다 
 				node_stack_push(oper_node,&node_ptr_stack_top);
 			}
