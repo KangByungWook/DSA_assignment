@@ -125,14 +125,16 @@ node_ptr make_tree(char* postfix){
 	return node_ptr_stack[0];
 }
 
+// preorder순서대로 노드를 출력. 
 void preorder_traversal(node_ptr ptr){
 	if(ptr){
 		printf("%c", ptr->data);
 		preorder_traversal(ptr->left_child);
-		inorder_traversal(ptr->right_child);
+		preorder_traversal(ptr->right_child);
 	}
 }
 
+// inorder순서대로 노드를 출력. 
 void inorder_traversal(node_ptr ptr){
 	if(ptr){
 		inorder_traversal(ptr->left_child);
@@ -141,6 +143,7 @@ void inorder_traversal(node_ptr ptr){
 	}
 }
 
+// postorder순서대로 노드를 출력. 
 void postorder_traversal(node_ptr ptr){
 	if(ptr){
 		postorder_traversal(ptr->left_child);
