@@ -7,8 +7,14 @@ typedef struct HeapType{
 	int heap_size;
 }HeapType;
 
+
+
 void init(HeapType *h){
 	h->heap_size = 0;
+	int i;
+	for(i = 0 ; i < MAX ; i++){
+		h->heap[i] = 0;
+	}
 }
 
 void swap(int *a, int *b){
@@ -220,5 +226,58 @@ void q_sort(int numbers[], int left, int right)
         q_sort(numbers, left, pivot - 1);
     if (right > pivot)
         q_sort(numbers, pivot+1, right);
+}
+
+void array_swap(int * arr, int a, int b)
+{
+	int temp;
+	temp = arr[a];
+	arr[a] = arr[b];
+	arr[b] = temp;
+}
+
+void Heapify(int * arr, int parent_position, int heap_size)
+{
+	int left, right, largest;
+	left=2*parent_position+1;
+	right=2*parent_position+2;
+
+	if((left<heap_size)&&(arr[left]>arr[parent_position]))
+		largest = left;
+	else
+		largest = parent_position;
+
+	if((right<heap_size)&&(arr[right]>arr[largest]))
+		largest = right;
+
+	if(largest != parent_position)
+	{
+		array_swap(arr, parent_position, largest);
+		Heapify(arr, largest, heap_size);
+	}
+}
+
+void Build_Heap(int * arr, int length)
+{
+	int parent_position;
+
+	for(parent_position=length/2-1; parent_position>=0; parent_position--)
+		Heapify(arr, parent_position, length);
+}
+
+void Heap_Sort(int * arr, int length)
+{
+	Build_Heap(arr, length);
+	int last_row;
+	int count = 0;
+
+	for(last_row = length-1; last_row>0; last_row--)
+	{
+		array_swap(arr, 0, last_row);
+		length--;
+		count ++;
+
+		Heapify(arr, 0, length);
+	}
 }
 

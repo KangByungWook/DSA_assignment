@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>       //srand
 #include <time.h>     //time
+#include <windows.h>
 #include "sort.c"
   
 //#define _MAX 6
@@ -9,10 +10,12 @@
 #define nMAX 60000
 
 
+
 void generate_random_number(int* list,int* bCheckExistOfNum,  int number){
 	int i;
 	for(i = 0 ; i < number ; i++){
 		bCheckExistOfNum[i] = 0;
+		list[i] = 0;
 	}
 	for(i=0 ; i<number ; )                    //번호가 6개 생성될 때까지 돈다.
     {	
@@ -36,13 +39,80 @@ void generate_random_number(int* list,int* bCheckExistOfNum,  int number){
     }
 }
 
+void do_sort(int sort_code, int* randomNum, int* bCheckExistOfNum,  int number, HeapType *Heap_ptr){
+	time_t startTime,endTime;
+	int i; 
+	float gap;
+	switch(sort_code){
+		//삽입 정렬의 경우 
+		case 1:
+			printf("난수 %d개 생성\n", number);
+            generate_random_number(randomNum, bCheckExistOfNum, number);
+            startTime = clock();
+			insertSort(randomNum, number);
+			endTime = clock();
+			for(i = 0 ; i < number; i++){
+				printf("%d ", randomNum[i]);
+			}
+			printf("\n");
+		   	gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 걸린 시간 %f\n", gap);
+			Sleep(3000);
+			break;
+		// 선택 정렬의 경우 
+		case 2:
+			printf("난수 %d개 생성\n", number);
+            generate_random_number(randomNum, bCheckExistOfNum, number);
+            startTime = clock();
+			selectionSort(randomNum, number);
+			endTime = clock();
+			for(i = 0 ; i < number; i++){
+				printf("%d ", randomNum[i]);
+			}
+			printf("\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 걸린 시간 %f\n", gap);
+			Sleep(3000);
+			break;
+		case 3:
+			printf("난수 %d개 생성\n", number);
+            generate_random_number(randomNum, bCheckExistOfNum, number);
+            startTime = clock();
+			mergeSort(randomNum, 0, number);
+			endTime = clock();
+			for(i = 0 ; i < number; i++){
+				printf("%d ", randomNum[i]);
+			}
+			printf("\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 걸린 시간 %f\n", gap);
+			Sleep(3000);
+			break;
+		case 4:
+			printf("난수 %d개 생성\n", number);
+            generate_random_number(randomNum, bCheckExistOfNum, number);
+            startTime = clock();
+            Heap_Sort(randomNum, 0);
+			endTime = clock();
+			
+			for(i = 0 ; i < number; i++){
+				printf("%d ", randomNum[i]);
+			}
+			printf("\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 걸린 시간 %f\n", gap);
+			Sleep(3000);
+			break;
+	}
+}
+
 
 
 int main( )
 {
     //변수 생성 및 초기화 부분
     srand( (unsigned)time(NULL) );              //srand로 초기화
-  
+  	
     int randomNum[nMAX];               //생성된 로또 번호를 저장할 변수
     int bCheckExistOfNum[nMAX] = {0};     //생성된 번호가 중복인지 체크할 변수(인덱스)
   	int i;
@@ -51,6 +121,7 @@ int main( )
     //번호 생성 부분 
     char cmd[10];
     int sort_code = 0;
+    HeapType *Heap_ptr = (HeapType*)malloc(sizeof(HeapType));
 //    generate_random_number(randomNum, bCheckExistOfNum, nMAX);
 //    startTime = clock();
 //    insertSort(randomNum, nMAX);
@@ -60,8 +131,7 @@ int main( )
 //	  }
 //	printf("\n");
 //   	
-//   	gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
-//	printf("총 걸린 시간 %f\n", gap);
+
    	
    	
    	while(1){
@@ -94,27 +164,15 @@ int main( )
             continue;
         }
         
-        switch(sort_code){
-            case 1:
-                printf("난수 10000개 생성\n");
-                generate_random_number(randomNum, bCheckExistOfNum, 60000);
-                startTime = clock();
-    			insertSort(randomNum, 60000);
-   				endTime = clock();
-				for(i = 0 ; i < 60000; i++){
-					printf("%d ", randomNum[i]);
-				}
-				printf("\n");
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            default:
-                break;
-        }
+        do_sort(sort_code, randomNum, bCheckExistOfNum, 10000, Heap_ptr);
+        do_sort(sort_code, randomNum, bCheckExistOfNum, 20000, Heap_ptr);
+        do_sort(sort_code, randomNum, bCheckExistOfNum, 30000, Heap_ptr);
+        do_sort(sort_code, randomNum, bCheckExistOfNum, 40000, Heap_ptr);
+        do_sort(sort_code, randomNum, bCheckExistOfNum, 50000, Heap_ptr);
+        do_sort(sort_code, randomNum, bCheckExistOfNum, 60000, Heap_ptr);
+        
+        
+        
         
         
     }
