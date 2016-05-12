@@ -2,77 +2,6 @@
 #include <stdlib.h>
 #define MAX 60000
 
-typedef struct HeapType{
-	int heap[MAX];
-	int heap_size;
-}HeapType;
-
-
-
-void init(HeapType *h){
-	h->heap_size = 0;
-	int i;
-	for(i = 0 ; i < MAX ; i++){
-		h->heap[i] = 0;
-	}
-}
-
-void swap(int *a, int *b){
-	int tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-void insert_key(HeapType *h, int key){
-	// TODO
-	int i = ++h->heap_size;
-	h->heap[i] = key;
-	
-	while(i != 1){
-		if(h->heap[i] > h->heap[i/2]){
-			swap(h->heap + i, h->heap + i/2);
-			i/=2;
-		}
-		else break;
-	}
-	
-}
-void print_heap(HeapType *h, int num){
-	int i;
-	for(i = 0 ; i < num ; i++){
-		printf("%d ", h->heap[i+1]);
-	}
-	printf("\n");
-}
-
-int delete_key(HeapType *h){
-	int parent, child;
-	int key, tmp;
-	int index = 1;
-	// 초기화 과정
-	int i = (h->heap_size)--;
-	key = h->heap[1] = h->heap[i];
-	
-	// 자기 자리를 찾아가는 과정
-	while(1){
-		// left node가 자신보다 큰 경우 
-		if(h->heap[index] < h->heap[index*2] && h->heap[index*2] > h->heap[index*2 + 1] && index*2 <= h->heap_size){
-			swap(h->heap + index, h->heap + index*2);
-			index *= 2;
-		}
-		// right node가 자신보다 큰 경우 
-		else if(h->heap[index] < h->heap[index*2 + 1] && h->heap[index*2] < h->heap[index*2 + 1] && index*2 + 1 <= h->heap_size){
-			swap(h->heap + index, h->heap + index*2 + 1);
-			index *= 2;
-			index++;
-		}
-		else break;
-		
-	}
-	
-	return key; 
-}
-
 void SWAP(int a[], int b[]){
 	int tmp = *a;
 	*a = *b;
@@ -110,18 +39,24 @@ void insertSort(int list[], int n){
 	}
 }
 
-void selectionSort(int list[], int n){
-	int i, j , least_idx, tmp;
-	for(i = 0; i < n; i++){
-		tmp = list[i];
-		for(j = i ; j < n ; j++){
-			if(list[j] < tmp){
-				tmp = list[j];
-				least_idx = j;
-			}
-		}
-		SWAP(list+i, list+least_idx);
-	}
+void selectionSort(int *list, const int n)
+{
+    int i, j, indexMin, temp;
+
+    for (i = 0; i < n - 1; i++)
+    {
+        indexMin = i;
+        for (j = i + 1; j < n; j++)
+        {
+            if (list[j] < list[indexMin])
+            {
+                indexMin = j;
+            }
+        }
+        temp = list[indexMin];
+        list[indexMin] = list[i];
+        list[i] = temp;
+    }
 }
 
 //mergeSort 시작 
@@ -134,7 +69,7 @@ void mergeSort(int list[], int left, int right){
 	}
 }
 
-void merge(int array[], int left, int mid, int right){
+void merge(int* array, int left, int mid, int right){
 	int i, j, k, m; 
 
 	i = left;       
@@ -175,109 +110,41 @@ void merge(int array[], int left, int mid, int right){
 }
 // mergerSort 끝
 //
-// quickSort 시작
-void quickSort(int numbers[], int array_size);
-void q_sort(int numbers[], int left, int right);
 
-void quickSort(int numbers[], int array_size)
+ 
+void Min_Heap(int parm_data[], int parm_start, int parm_count)
 {
-    q_sort(numbers, 0, array_size -1);
-}
-
-void q_sort(int numbers[], int left, int right)
-{
-    int pivot, l_hold, r_hold;
-    l_hold  = left;
-    r_hold  = right;
-    pivot   = numbers[left];  // 0번째 원소를 피봇으로 선택
-    while (left < right)
-    {
-        // 값이 선택한 피봇과 같거나 크다면, 이동할 필요가 없다
-        while ((numbers[right] >= pivot) && (left < right))
-          right --;
-
-          // 그렇지 않고 값이 피봇보다 작다면,
-          // 피봇의 위치에 현재 값을 넣는다.
-        if (left != right)
-        {
-             numbers[left] = numbers[right];
+    int node_left, node_right, node_current, node_start, node_index;
+    if(parm_count - parm_start < 2) return;
+    node_current = parm_start;
+ 
+    while(node_current >= 0){
+        node_index = node_current;
+        node_start = node_current;
+        while(node_start*2+1 < parm_count){
+            node_left = node_start*2+1;
+            node_right = node_start*2+2;
+            node_start = node_left;
+ 
+            if(node_right < parm_count && parm_data[node_right] >= parm_data[node_left]){
+                node_start = node_right;
+            }
+            if(parm_data[node_start] > parm_data[node_index]){
+                SWAP(&parm_data[node_index], &parm_data[node_start]);
+                node_index = node_start;
+            }
         }
-        // 왼쪽부터 현재 위치까지 값을 읽어들이면서
-        // 피봇보다 큰 값이 있다면, 값을 이동한다.
-        while ((numbers[left] <= pivot) && (left < right))
-          left ++;
-        
-        if (left != right)
-        {
-           numbers[right] = numbers[left];
-           right --;
-        }
+        --node_current;
     }
-
-    // 모든 스캔이 끝났다면, 피봇값을 현재 위치에 입력한다.
-    // 이제 피봇을 기준으로 왼쪽에는 피봇보다 작거나 같은 값만 남았다.
-    numbers[left] = pivot;
-    pivot         = left;
-    left          = l_hold;
-    right         = r_hold;
-
-    // 재귀호출을 수행한다.
-    if (left < pivot)
-        q_sort(numbers, left, pivot - 1);
-    if (right > pivot)
-        q_sort(numbers, pivot+1, right);
 }
-
-void array_swap(int * arr, int a, int b)
+ 
+void Heap_Sort(int parm_data[], int parm_count)
 {
-	int temp;
-	temp = arr[a];
-	arr[a] = arr[b];
-	arr[b] = temp;
-}
-
-void Heapify(int * arr, int parent_position, int heap_size)
-{
-	int left, right, largest;
-	left=2*parent_position+1;
-	right=2*parent_position+2;
-
-	if((left<heap_size)&&(arr[left]>arr[parent_position]))
-		largest = left;
-	else
-		largest = parent_position;
-
-	if((right<heap_size)&&(arr[right]>arr[largest]))
-		largest = right;
-
-	if(largest != parent_position)
-	{
-		array_swap(arr, parent_position, largest);
-		Heapify(arr, largest, heap_size);
-	}
-}
-
-void Build_Heap(int * arr, int length)
-{
-	int parent_position;
-
-	for(parent_position=length/2-1; parent_position>=0; parent_position--)
-		Heapify(arr, parent_position, length);
-}
-
-void Heap_Sort(int * arr, int length)
-{
-	Build_Heap(arr, length);
-	int last_row;
-	int count = 0;
-
-	for(last_row = length-1; last_row>0; last_row--)
-	{
-		array_swap(arr, 0, last_row);
-		length--;
-		count ++;
-
-		Heapify(arr, 0, length);
-	}
+    Min_Heap(parm_data, parm_count/2-1, parm_count);
+    while(parm_count > 0){
+        --parm_count;
+        SWAP(&parm_data[0], &parm_data[parm_count]);
+        Min_Heap(parm_data, 0, parm_count);
+    }
 }
 

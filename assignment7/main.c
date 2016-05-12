@@ -37,74 +37,108 @@ void generate_random_number(int* list,int* bCheckExistOfNum,  int number){
 		}
         
     }
+    for(i = 0 ; i < number; i++){
+    	printf("%d ", list[i]);
+	}
 }
 
-void do_sort(int sort_code, int* randomNum, int* bCheckExistOfNum,  int number, HeapType *Heap_ptr){
+float do_sort(int sort_code, int* randomNum, int* bCheckExistOfNum,  int number){
 	time_t startTime,endTime;
 	int i; 
 	float gap;
 	switch(sort_code){
 		//삽입 정렬의 경우 
 		case 1:
-			printf("난수 %d개 생성\n", number);
+			printf("난수 %d개를 생성 중입니다...\n", number);
+			Sleep(3000);
             generate_random_number(randomNum, bCheckExistOfNum, number);
+            printf("\n난수가 %d개 생성되었습니다.\n", number);
+            Sleep(3000);
+            printf("정렬 알고리즘을 시작합니다..\n");
             startTime = clock();
 			insertSort(randomNum, number);
 			endTime = clock();
-			for(i = 0 ; i < number; i++){
-				if(i >= 1 && randomNum[i] - randomNum[i-1] != 1)printf("이상한 부분 발견 %d번째 숫자 %d & %d번째 숫자 %d", i , randomNum[i], i-1, randomNum[i-1] );
-				if(i >= 1 && randomNum[i] - randomNum[i-1] == 0)printf("중복발생 %d번째 숫자 %d & %d번째 숫자 %d\n", i , randomNum[i], i-1, randomNum[i-1]);
-			}
-			if(randomNum[0] != 1)printf("0번째 숫자가 1이 아님\n");
-			printf("\n");
-		   	gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
-			printf("총 걸린 시간 %f\n", gap);
+			printf("정렬 알고리즘이 완료되었습니다.\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 수행 시간 : %f초\n", gap);
 			Sleep(3000);
-			break;
+			printf("정렬된 결과를 출력합니다.\n");
+			Sleep(3000);
+			for(i = 0 ; i < number ; i++){
+				printf("%d ", randomNum[i]);
+			}
+			printf("\n정렬이 완료되었습니다.\n");
+			Sleep(3000); 
+			return gap;
 		// 선택 정렬의 경우 
 		case 2:
-			printf("난수 %d개 생성\n", number);
+			printf("난수 %d개를 생성 중입니다...\n", number);
+			Sleep(3000);
             generate_random_number(randomNum, bCheckExistOfNum, number);
+            printf("\n난수가 %d개 생성되었습니다.\n", number);
+            Sleep(3000);
+            printf("정렬 알고리즘을 시작합니다..\n");
             startTime = clock();
 			selectionSort(randomNum, number);
 			endTime = clock();
-			for(i = 0 ; i < number; i++){
+			printf("정렬 알고리즘이 완료되었습니다.\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 수행 시간 : %f초\n", gap);
+			Sleep(3000);
+			printf("정렬된 결과를 출력합니다.\n");
+			Sleep(3000);
+			for(i = 0 ; i < number ; i++){
 				printf("%d ", randomNum[i]);
 			}
-			printf("\n");
-			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
-			printf("총 걸린 시간 %f\n", gap);
-			Sleep(3000);
-			break;
+			printf("\n정렬이 완료되었습니다.\n");
+			Sleep(3000); 
+			return gap;
+			
 		case 3:
-			printf("난수 %d개 생성\n", number);
+			printf("난수 %d개를 생성 중입니다...\n", number);
+			Sleep(3000);
             generate_random_number(randomNum, bCheckExistOfNum, number);
+            printf("\n난수가 %d개 생성되었습니다.\n", number);
+            Sleep(3000);
+            printf("정렬 알고리즘을 시작합니다..\n");
             startTime = clock();
 			mergeSort(randomNum, 0, number);
 			endTime = clock();
-			for(i = 0 ; i < number; i++){
+			printf("정렬 알고리즘이 완료되었습니다.\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 수행 시간 : %f초\n", gap);
+			Sleep(3000);
+			printf("정렬된 결과를 출력합니다.\n");
+			Sleep(3000);
+			for(i = 0 ; i < number ; i++){
 				printf("%d ", randomNum[i]);
 			}
-			printf("\n");
-			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
-			printf("총 걸린 시간 %f\n", gap);
-			Sleep(3000);
-			break;
-		case 4:
-			printf("난수 %d개 생성\n", number);
-            generate_random_number(randomNum, bCheckExistOfNum, number);
-            startTime = clock();
-            Heap_Sort(randomNum, 0);
-			endTime = clock();
+			printf("\n정렬이 완료되었습니다.\n");
+			Sleep(3000); 
+			return gap;
 			
-			for(i = 0 ; i < number; i++){
+		case 4:
+			printf("난수 %d개를 생성 중입니다...\n", number);
+			Sleep(3000);
+            generate_random_number(randomNum, bCheckExistOfNum, number);
+            printf("\n난수가 %d개 생성되었습니다.\n", number);
+            Sleep(3000);
+            printf("정렬 알고리즘을 시작합니다..\n");
+            startTime = clock();
+			Heap_Sort(randomNum, number);
+			endTime = clock();
+			printf("정렬 알고리즘이 완료되었습니다.\n");
+			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
+			printf("총 수행 시간 : %f초\n", gap);
+			Sleep(3000);
+			printf("정렬된 결과를 출력합니다.\n");
+			Sleep(3000);
+			for(i = 0 ; i < number ; i++){
 				printf("%d ", randomNum[i]);
 			}
-			printf("\n");
-			gap=(float)(endTime-startTime)/(CLOCKS_PER_SEC); //계산
-			printf("총 걸린 시간 %f\n", gap);
-			Sleep(3000);
-			break;
+			printf("\n정렬이 완료되었습니다.\n");
+			Sleep(3000); 
+			return gap;
 	}
 }
 
@@ -117,25 +151,15 @@ int main( )
   	
     int randomNum[nMAX];               //생성된 로또 번호를 저장할 변수
     int bCheckExistOfNum[nMAX] = {0};     //생성된 번호가 중복인지 체크할 변수(인덱스)
-    int i;
+    int i,j;
     
   	float gap;
+  	float gap_result_list[6];
+  	float max_gap = 0;
    	time_t startTime=0, endTime=0;
     //번호 생성 부분 
-    char cmd[10];
+    char cmd[10], sorting_name[20];
     int sort_code = 0;
-    HeapType *Heap_ptr = (HeapType*)malloc(sizeof(HeapType));
-//    generate_random_number(randomNum, bCheckExistOfNum, nMAX);
-//    startTime = clock();
-//    insertSort(randomNum, nMAX);
-//    endTime = clock();
-//  	for(i = 0 ; i < nMAX; i++){
-//  		printf("%d ", randomNum[i]);
-//	  }
-//	printf("\n");
-//   	
-
-   	
    	
    	while(1){
         printf("1. 삽입정렬\n");
@@ -147,18 +171,22 @@ int main( )
         scanf("%s", cmd);
         if(!strcmp(cmd,"1")){
             printf("삽입정렬 선택!\n");
+            strcpy(sorting_name, "삽입정렬");
             sort_code = 1;
         }
         else if(!strcmp(cmd,"2")){
             printf("선택정렬 선택!\n");
+            strcpy(sorting_name, "선택정렬");
             sort_code = 2;
         }
         else if(!strcmp(cmd,"3")){
             printf("합병정렬 선택!\n");
+            strcpy(sorting_name, "합병정렬");
             sort_code = 3;
         }
         else if(!strcmp(cmd,"4")){
             printf("힙정렬 선택!\n");
+            strcpy(sorting_name, "힙정렬");
             sort_code = 4;
         }
         else if(!strcmp(cmd,"q")) break;
@@ -167,15 +195,16 @@ int main( )
             continue;
         }
         
-        //do_sort(sort_code, randomNum, bCheckExistOfNum, 10000, Heap_ptr);
-        //do_sort(sort_code, randomNum, bCheckExistOfNum, 20000, Heap_ptr);
-        //do_sort(sort_code, randomNum, bCheckExistOfNum, 30000, Heap_ptr);
-        do_sort(sort_code, randomNum, bCheckExistOfNum, 40000, Heap_ptr);
-        //do_sort(sort_code, randomNum, bCheckExistOfNum, 50000, Heap_ptr);
-        // do_sort(sort_code, randomNum, bCheckExistOfNum, 60000, Heap_ptr);
+        for(i = 0 ; i< 6; i++){
+        	gap_result_list[i] = do_sort(sort_code, randomNum, bCheckExistOfNum, (i+1)*10000);
+		}
         
-        
-        
+        system("cls");
+        printf("-----------%s 실험 결과--------------\n",sorting_name);
+        for(i = 0 ; i < 6 ; i++){
+        	printf("%d개 정렬 수행 시간 : %f초\n", (i+1)*10000, gap_result_list[i]);
+        }
+        printf("---------------------------------------\n");
         
         
     }
