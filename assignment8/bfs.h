@@ -63,7 +63,6 @@ int isEmpty(Queue* q){
 }
 
 void enqueue(Queue* q, int data){
-	printf("enqueue called\n");
 	if(isFull(q)){
 		printf("Queue is full\n");
 		exit(0);
@@ -74,7 +73,6 @@ void enqueue(Queue* q, int data){
 }
 
 int dequeue(Queue* q){
-	printf("dequeue called\n");
 	int temp = -1;
 	
 	if(isEmpty(q)){
@@ -94,7 +92,7 @@ void bfs(Graph *g, int v){
 	
 	visited[v] = TRUE;
 	printf("%d->", v);
-	
+	enqueue(&q,v);
 	while(!isEmpty(&q)){
 		v = dequeue(&q);
 		for(w=0; w < g->n ; w++){
