@@ -2,11 +2,15 @@
 #include <stdlib.h>
 #define max(x,y) ((x)>(y))? (x):(y)
 
+typedef struct Voca{
+	char* word;
+	char* meaning;
+}Voca;
+
 typedef struct AvlNode{
-	int data;
+	Voca data;
 	struct AvlNode* left, *right;
 }AvlNode;
-
 
 int getHeight(AvlNode* node){
 	int h = 0 ;
@@ -69,7 +73,7 @@ AvlNode* rebalance(AvlNode** node){
 }
 
 //TODO
-AvlNode* avlAdd(AvlNode **root, int data){
+AvlNode* avlAdd(AvlNode **root, Voca data){
 	if(*root==NULL){
 		*root = (AvlNode*)malloc(sizeof(AvlNode));
 		if(*root == NULL){
@@ -77,10 +81,10 @@ AvlNode* avlAdd(AvlNode **root, int data){
 		}
 		(*root)->data = data;
 		(*root)->left = (*root)->right = NULL;
-	}else if(data < (*root)->data){
+	}else if(strcmp(data.word, (*root)->data.word) < 0){
 		(*root)->left = avlAdd(&((*root)->left), data);
 		*root = rebalance(root);
-	}else if(data > (*root)->data){
+	}else if(strcmp(data.word, (*root)->data.word) > 0){
 		(*root)->right = avlAdd(&((*root)->right), data);
 		*root = rebalance(root);
 	}else{
@@ -90,35 +94,41 @@ AvlNode* avlAdd(AvlNode **root, int data){
 	return *root;
 }
 
-AvlNode *avlSearch(AvlNode* node, int key){
+AvlNode *avlSearch(AvlNode* node, char word[]){
 	if(node == NULL)return NULL;
-	printf("Å½»ö: %d\n", node->data);
-	if(key == node->data) return node;
-	else if(key < node->data) return avlSearch(node->left, key);
-	else return avlSearch(node->right, key);
+	printf("Å½»ö: %s\n", node->data.word);
+	if(!strcmp(word, node->data.word)) return node;
+	else if(strcmp(word, node->data.word) < 0) return avlSearch(node->left, word);
+	else return avlSearch(node->right, word);
 }
 
 AvlNode* inorderTraveling(AvlNode* root){
 	if(root != NULL){
 		inorderTraveling(root->left);
-		printf("[%d] ", root->data);
+		printf("[%s] ", root->data.word);
 		inorderTraveling(root->right);
 	}
 }
 
 void main(void){
 	AvlNode* root = NULL;
-	
-	avlAdd(&root, 7);
-	avlAdd(&root, 8);
-	avlAdd(&root, 9);
-	avlAdd(&root, 2);
-	avlAdd(&root, 1);
-	avlAdd(&root, 5);
-	avlAdd(&root, 3);
-	avlAdd(&root, 6);
-	avlAdd(&root, 4);
-	printf("\n°Ë»ö : %d\n", avlSearch(root,4)->data);
+	Voca voc;
+	voc.word = "apple";
+	voc.meaning = "something";
+	avlAdd(&root, voc);
+	voc.word = "pear";
+	voc.meaning = "something";
+	avlAdd(&root, voc);
+	voc.word = "banana";
+	voc.meaning = "something";
+	avlAdd(&root, voc);
+	voc.word = "pineapple";
+	voc.meaning = "something";
+	avlAdd(&root, voc);
+	voc.word = "grape";
+	voc.meaning = "something";
+	avlAdd(&root, voc);
+	printf("\n°Ë»ö : %s\n", avlSearch(root,"grape")->data.word);
 	printf("\n");
 	inorderTraveling(root);
 	
