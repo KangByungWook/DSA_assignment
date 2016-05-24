@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define max(x,y) ((x)>(y))? (x):(y)
 
 typedef struct Voca{
-	char* word;
-	char* meaning;
+	char word[50];
+	char meaning[256];
 }Voca;
 
 typedef struct AvlNode{
 	Voca data;
-	struct AvlNode* left, *right;
+	struct AvlNode *left, *right;
 }AvlNode;
 
 int getHeight(AvlNode* node){
@@ -68,7 +69,6 @@ AvlNode* rebalance(AvlNode** node){
 			*node = rotateRL(*node);
 		}
 	}
-	
 	return *node;
 }
 
@@ -110,27 +110,103 @@ AvlNode* inorderTraveling(AvlNode* root){
 	}
 }
 
+
+void data_init(AvlNode** root){
+	FILE *fp ;
+    int index, data;
+    char* inp;
+    int buf_size = 1024;
+    char word[50];
+    char meaning[100];
+    fp = fopen("eng_voc_sm.txt", "r");
+	char* token = NULL;
+    inp = malloc(buf_size+5);
+    Voca voc;
+
+    while(fgets(inp,buf_size,fp)){
+        if(strlen(inp) != 1){
+//            printf("------- \n");
+//            printf("입력받은 문장 : %s\n" , inp);
+//			printf("문자열의 길이 : %d \n" , strlen(inp));
+            token = strtok(inp, ">");
+            int index = 0;
+            while(token != NULL){
+            	//printf("token = %s\n", token);
+            	
+            	if(index == 0){
+            		strcpy(voc.word, token);
+				}else{
+					strcpy(voc.meaning, token);
+				}
+				token = strtok(NULL,">");
+				index++;
+			}
+			
+			avlAdd(root, voc);
+			
+//			printf("word : %s", word);
+//			printf("meaning : %s", meaning);
+//			
+//			
+//            printf("------- \n");
+        }
+    }
+    fclose(fp);
+}
 void main(void){
 	AvlNode* root = NULL;
+	printf("data gogo\n");
+	data_init(&root);
+	printf("data complete\n");
+	
 	Voca voc;
-	voc.word = "apple";
-	voc.meaning = "something";
-	avlAdd(&root, voc);
-	voc.word = "pear";
-	voc.meaning = "something";
-	avlAdd(&root, voc);
-	voc.word = "banana";
-	voc.meaning = "something";
-	avlAdd(&root, voc);
-	voc.word = "pineapple";
-	voc.meaning = "something";
-	avlAdd(&root, voc);
-	voc.word = "grape";
-	voc.meaning = "something";
-	avlAdd(&root, voc);
-	printf("\n검색 : %s\n", avlSearch(root,"grape")->data.word);
-	printf("\n");
-	inorderTraveling(root);
+	char cmd[5], keyword[50];
+	while(1){
+		printf("-----------------------------------\n"); 
+		printf("1. 단어 추가\n");
+		printf("2. 단어 검색\n");
+		printf("3. 단어 목록 내림차순으로 보기\n");
+		printf("4. 종료\n");
+		printf("-----------------------------------\n");
+		scanf("%s", cmd);
+		if(strcmp(cmd, "1") == 0){
+			printf("Input the word : ");
+			scanf("%s", voc.word);
+			printf("Input the meaning : ");
+			scanf("%s", voc.meaning);
+			avlAdd(&root, voc);
+		}
+		if(strcmp(cmd,"2") == 0){
+			printf("Input the keyword : ");
+			scanf("%s", keyword);
+			printf("단어 : %s\n", avlSearch(root,keyword)->data.word);
+			printf("의미 : %s\n", avlSearch(root,keyword)->data.meaning);
+		}
+		if(strcmp(cmd,"3") == 0){
+			inorderTraveling(root);
+		}
+		if(strcmp(cmd,"4") == 0){
+			break;
+		}
+	} 
+//	voc.word = "apple";
+//	voc.meaning = "something";
+//	avlAdd(&root, voc);
+//	voc.word = "pear";
+//	voc.meaning = "something";
+//	avlAdd(&root, voc);
+//	voc.word = "banana";
+//	voc.meaning = "something";
+//	avlAdd(&root, voc);
+//	voc.word = "pineapple";
+//	voc.meaning = "something";
+//	avlAdd(&root, voc);
+//	voc.word = "grape";
+//	voc.meaning = "something";
+//	avlAdd(&root, voc);
+//	printf("\n검색 : %s\n", avlSearch(root,"your")->data.word);
+//	printf("\n");
+	
 	
 	return 0;
 }
