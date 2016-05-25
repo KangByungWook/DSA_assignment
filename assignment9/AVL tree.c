@@ -56,7 +56,7 @@ AvlNode* rotateLR(AvlNode* parent){
 AvlNode* rebalance(AvlNode** node){
 	int heightDiff = getHeightDiff(*node);
 	if(heightDiff > 1){
-		if(getHeightDiff((*node)->left)>0){
+		if(getHeightDiff((*node)->left) > 0){
 			*node = rotateLL(*node); 
 		}else{
 			*node = rotateLR(*node);
@@ -89,17 +89,40 @@ AvlNode* avlAdd(AvlNode **root, Voca data){
 		*root = rebalance(root);
 	}else{
 		printf("중복키 삽입 오류\n");
-		exit(1);
+		return *root;
 	}
 	return *root;
 }
 
 AvlNode *avlSearch(AvlNode* node, char word[]){
-	if(node == NULL)return NULL;
-	printf("탐색: %s\n", node->data.word);
-	if(!strcmp(word, node->data.word)) return node;
-	else if(strcmp(word, node->data.word) < 0) return avlSearch(node->left, word);
-	else return avlSearch(node->right, word);
+	AvlNode *p_node = node;
+	while(p_node && (strcmp(p_node->data.word, word) != 0)){
+		if(!strcmp(word, p_node->data.word)){
+		printf("found!! : %s\n", node->data.word);
+		return node;	
+		}
+		else if(strcmp(p_node->data.word, word) > 0){
+			printf("move left\n");
+			p_node = p_node->left;
+		}else{
+			printf("move right\n");
+			p_node = p_node->right;
+		}
+	}
+	return p_node;
+//	if(node == NULL)return NULL;
+//	if(!strcmp(word, node->data.word)){
+//		printf("found!! : %s\n", node->data.word);
+//		return node;	
+//	} 
+//	else if(strcmp(word, node->data.word) < 0){
+//		printf("move left!!\n");
+//		return avlSearch(node->left, word);	
+//	} 
+//	else{
+//		printf("move right!!\n");
+//		return avlSearch(node->right, word);	
+//	} 
 }
 
 AvlNode* inorderTraveling(AvlNode* root){
@@ -153,10 +176,11 @@ void data_init(AvlNode** root){
     }
     fclose(fp);
 }
+
 void main(void){
 	AvlNode* root = NULL;
 	printf("data gogo\n");
-	data_init(&root);
+	//data_init(&root);
 	printf("data complete\n");
 	
 	Voca voc;
@@ -179,8 +203,15 @@ void main(void){
 		if(strcmp(cmd,"2") == 0){
 			printf("Input the keyword : ");
 			scanf("%s", keyword);
-			printf("단어 : %s\n", avlSearch(root,keyword)->data.word);
-			printf("의미 : %s\n", avlSearch(root,keyword)->data.meaning);
+			AvlNode* target_p = avlSearch(root,keyword);
+			if(target_p){
+				printf("단어 : %s\n", target_p->data.word);
+				printf("의미 : %s\n", target_p->data.meaning);	
+			}
+			else{
+				printf("단어가 없습니다\n");
+			}
+			
 		}
 		if(strcmp(cmd,"3") == 0){
 			inorderTraveling(root);
