@@ -1,74 +1,80 @@
-#include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
-#include <assert.h>
 #include <windows.h>
 
+// 단어와 의미를 담는 영단어 타입 
 typedef struct Voca{
+	// 단어의 이름을 담는 변수 
 	char word[50];
+	// 단어의 의미를 담는 변수 
 	char meaning[256];
 }Voca;
 
+// avl트리의 노드 타입 
 struct avl_node_s {
 	struct avl_node_s *left;
 	struct avl_node_s *right;
 	Voca voc;
 };
 
+// avl트리의 노드 타입을 AvlNode라고 명명 
 typedef struct avl_node_s AvlNode;
 
+// avl트리의 트리타입
+// root 노드를 변수로 가짐 
 struct avl_tree_s {
 	struct avl_node_s *root;
 };
 
+// avl트리의 트리타입을 AvlTree로 명명 
 typedef struct avl_tree_s AvlTree;
 
 
 
 
-/* Create a new AVL tree. */
+// 새로운 avl트리를 생성 
 AvlTree *avl_create() {
 	AvlTree *tree = NULL;
-
+	// AvlTree 변수를 동적할당 
 	if( ( tree = malloc( sizeof( AvlTree ) ) ) == NULL ) {
 		return NULL;
 	}
-
+	
 	tree->root = NULL;
 
 	return tree;
 }
 
-/* Initialize a new node. */
+// 새로운 노드를 생성하는 함수 
 AvlNode *avl_create_node() {
 	AvlNode *node = NULL;
-	
+	// AvlNode 변수를 동적할당	
 	if( ( node = malloc( sizeof( AvlNode ) ) ) == NULL ) {
 		return NULL;
 	}
 
 	node->left = NULL;
 	node->right = NULL;
-//	node->voc.meaning = "";
-//	node->voc.word = "";
 
 	return node;	
 }
 
-/* Find the height of an AVL node recursively */
+// Avl 노드의 높이를 구하는 함수 
 int getNodeHeight( AvlNode *node ) {
 	int height_left = 0;
 	int height_right = 0;
-
+	
+	// 재귀함수를 이용하여 노드의 높이를 구함 
 	if( node->left ) height_left = getNodeHeight( node->left );
 	if( node->right ) height_right = getNodeHeight( node->right );
-
+	 
 	return height_right > height_left ? ++height_right : ++height_left;
 }
 
-/* Find the balance of an AVL node */
+// 노드의 balanceFactor를 구하는 함수
+// 균형상태에 잇는지 체크 
 int getBalanceFactor( AvlNode *node ) {
 	int bf = 0;
 
@@ -78,7 +84,7 @@ int getBalanceFactor( AvlNode *node ) {
 	return bf ;
 }
 
-/* Left Left Rotate */
+// LL rotate 
 AvlNode *RotateLL( AvlNode *node ) {
  	AvlNode *a = node;
 	AvlNode *b = a->left;
@@ -89,7 +95,7 @@ AvlNode *RotateLL( AvlNode *node ) {
 	return( b );
 }
 
-/* Left Right Rotate */
+// LR rotate
 AvlNode *RotateLR( AvlNode *node ) {
 	AvlNode *a = node;
 	AvlNode *b = a->left;
@@ -103,7 +109,7 @@ AvlNode *RotateLR( AvlNode *node ) {
 	return( c );
 }
 
-/* Right Left Rotate */
+// RL rotate
 AvlNode *RotateRL( AvlNode *node ) {
 	AvlNode *a = node;
 	AvlNode *b = a->right;
@@ -117,7 +123,7 @@ AvlNode *RotateRL( AvlNode *node ) {
 	return( c );
 }
 
-/* Right Right Rotate */
+// RR rotate
 AvlNode *RotateRR( AvlNode *node ) {
 	AvlNode *a = node;
 	AvlNode *b = a->right;
@@ -128,11 +134,11 @@ AvlNode *RotateRR( AvlNode *node ) {
 	return( b );
 }
 
-/* Balance a given node */
+// 노드들의 균형을 맞춰주는 함수 
 AvlNode *AvlBalanceNode( AvlNode *node ) {
 	AvlNode *newroot = NULL;
 
-	/* Balance our children, if they exist. */
+	// 자식노드의 균형을 맞춰준다 
 	if( node->left )
 		node->left  = AvlBalanceNode( node->left  );
 	if( node->right ) 
@@ -140,32 +146,31 @@ AvlNode *AvlBalanceNode( AvlNode *node ) {
 
 	int bf = getBalanceFactor( node );
 
+	// 왼쪽 노드의 bf가 더 큰 경우 
 	if( bf >= 2 ) {
-		/* Left Heavy */	
-
 		if( getBalanceFactor( node->left ) <= -1 ) 
 			newroot = RotateLR( node );
 		else 
 			newroot = RotateLL( node );
 
-	} else if( bf <= -2 ) {
-		/* Right Heavy */
-
+	}
+	// 오른쪽 노드의 bf가 더 큰 경우 
+	else if( bf <= -2 ) {
 		if( getBalanceFactor( node->right ) >= 1 )
 			newroot = RotateRL( node );
 		else 
 			newroot = RotateRR( node );
 
-	} else {
-		/* This node is balanced -- no change. */
-
+	}
+	// 노드의 균형이 맞는 경우 
+	else {
 		newroot = node;
 	}
 
 	return( newroot );	
 }
 
-/* Balance a given tree */
+// 주어진 avl트리의 균형을 맞춰주는 함수 
 void AvlBalance( AvlTree *tree ) {
 
 	AvlNode *newroot = NULL;
@@ -177,34 +182,38 @@ void AvlBalance( AvlTree *tree ) {
 	}
 }
 
-/* Insert a new node. */
+// 새로운 노드를 삽입하는 함수 
 void AvlInsert( AvlTree *tree, Voca voc ) {
 	AvlNode *node = NULL;
 	AvlNode *next = NULL;
 	AvlNode *last = NULL;
 
-	/* Well, there must be a first case */ 	
+	// 최초의 노드를 삽입하는 경우 
 	if( tree->root == NULL ) {
 		node = avl_create_node();
 		node->voc = voc;
 
 		tree->root = node;
-
-	/* Okay.  We have a root already.  Where do we put this? */
-	} else {
+	
+	} 
+	// root 노드가 이미 있는 경우  
+	else {
 		next = tree->root;
 
 		while( next != NULL ) {
 			last = next;
-
+			
+			// 사전 순서상 넣으려는 단어가 해당 노드의 단어보다 순서가 앞인 경우 
 			if( strcmp(voc.word, next->voc.word) < 0 ) {
 				next = next->left;
 
-			} else if( strcmp(voc.word, next->voc.word) > 0 ) {
+			}
+			// 사전 순서상 넣으려는 단어가 해당 노드의 단어보다 순서가 뒤인 경우  
+			else if( strcmp(voc.word, next->voc.word) > 0 ) {
 				next = next->right;
-
-			/* Have we already inserted this node? */
-			} else if( strcmp(voc.word, next->voc.word) == 0 ) {
+			}
+			// 넣으려는 단어가 이미 사전에 있는  경우 
+			else if( strcmp(voc.word, next->voc.word) == 0 ) {
 				/* This shouldn't happen. */
 				printf("이미 존재합니다.\n");
 				break;	
@@ -222,32 +231,35 @@ void AvlInsert( AvlTree *tree, Voca voc ) {
 	AvlBalance( tree );
 }
 
-/* Find the node containing a given voc */
+// 단어를 검색하는 함수 
 AvlNode *AvlFind( AvlTree *tree, char* word ) {
 	AvlNode *current = tree->root;
-	//printf("Avl tree 를 이용한 단어 탐색 시작\n");
 	while( current && strcmp(word, current->voc.word) != 0 ) {
 		
+		// 사전 순서상 검색하려는 단어가 해당 노드의 단어보다 순서가 앞인 경우 
 		if( strcmp(word, current->voc.word) > 0 ){
 			printf("현재 노드  [%s] (오른쪽으로 이동)\n", current->voc.word);
 			current = current->right;
 		}
+		// 사전 순서상 검색하려는 단어가 해당 노드의 단어보다 순서가 뒤인 경우 
 		else{
 			printf("현재 노드  [%s] (왼쪽으로 이동)\n", current->voc.word);
 			current = current->left;
 		}	
 	}
+	// while문이 끝난 후 current가 NULL인 경우 
 	if(!current){
 		printf("\n단어가 존재하지 않습니다.\n\n");
 	}
+	// NULL이 아닌 경우 단어를 찾았다는 의미 
 	else{
 		printf("\n단어를 찾았습니다\n단어 : %s\n의미: %s\n", current->voc.word, current->voc.meaning);
 		
 	} 
-	//printf("Avl tree 를 이용한 단어 탐색 끝\n");
 	return current;
 }
 
+// 파일로부터 단어와 단어의 의미를 읽어와 avl트리에 차례로 넣어주는 함수 
 void data_init(AvlTree** root){
 	FILE *fp ;
     int index, data;
@@ -260,10 +272,12 @@ void data_init(AvlTree** root){
     inp = malloc(buf_size+5);
     Voca voc;
 	
+	// 텍스트 파일의 내용을 한 줄씩 읽는다. 
     while(fgets(inp,buf_size,fp)){
-        if(strlen(inp) != 1){
+    	if(strlen(inp) != 1){
             token = strtok(inp, ">");
             int index = 0;
+            // ">"를 경계로 앞은 단어, 뒤는 단어의 의미 
             while(token != NULL){
             	if(index == 0){
             		strcpy(voc.word, token);
@@ -274,12 +288,15 @@ void data_init(AvlTree** root){
 				index++;
 			}
 			
+			// 저장된 단어와 단어의 의미를 avl트리에 넣는다. 
 			AvlInsert(*root, voc);
         }
     }
     fclose(fp);
 }
 
+// inorder 순서로 node를 탐색
+// 알파벳 순으로 탐색이 된다. 
 AvlNode* inorderTraveling(AvlNode* root){
 	if(root != NULL){
 		inorderTraveling(root->left);
@@ -289,7 +306,7 @@ AvlNode* inorderTraveling(AvlNode* root){
 }
 
 
-int main( int argc, char **argv ) {
+int main() {
 	AvlTree *tree = NULL;
 	int i = 0; 
 	int r = 0;
@@ -298,6 +315,7 @@ int main( int argc, char **argv ) {
 	tree = avl_create();
 	
 	data_init(&tree);
+	
 	char cmd[5], keyword[50];
 	while(1){
 		printf("-----------------------------------\n");
@@ -308,6 +326,7 @@ int main( int argc, char **argv ) {
 		printf("-----------------------------------\n");
 		printf("무엇을 하시겠습니까? : ");
 		scanf("%s", cmd);
+		// 단어 추가 
 		if(strcmp(cmd, "1") == 0){
 			system("cls");
 			printf("단어 : ");
@@ -317,6 +336,7 @@ int main( int argc, char **argv ) {
 			system("cls"); 
 			AvlInsert(tree, voc);
 		}
+		// 단어 검색 
 		if(strcmp(cmd,"2") == 0){
 			system("cls");
 			printf("찾고자하는 단어 입력 : ");
@@ -324,6 +344,7 @@ int main( int argc, char **argv ) {
 			system("cls");
 			AvlFind(tree, keyword);
 		}
+		// 단어 목록 내림차순으로 보기. 
 		if(strcmp(cmd,"3") == 0){
 			system("cls");
 			inorderTraveling(tree->root);
@@ -332,6 +353,6 @@ int main( int argc, char **argv ) {
 		if(strcmp(cmd,"4") == 0){
 			break;
 		}
-	} 
+	}
 	return 0;
 }
