@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <string.h>
 #include <assert.h>
+#include <windows.h>
 
 typedef struct Voca{
 	char word[50];
@@ -204,7 +205,9 @@ void AvlInsert( AvlTree *tree, Voca voc ) {
 
 			/* Have we already inserted this node? */
 			} else if( strcmp(voc.word, next->voc.word) == 0 ) {
-				/* This shouldn't happen. */	
+				/* This shouldn't happen. */
+				printf("이미 존재합니다.\n");
+				break;	
 			}
 		}
 
@@ -222,38 +225,27 @@ void AvlInsert( AvlTree *tree, Voca voc ) {
 /* Find the node containing a given voc */
 AvlNode *AvlFind( AvlTree *tree, char* word ) {
 	AvlNode *current = tree->root;
-
+	//printf("Avl tree 를 이용한 단어 탐색 시작\n");
 	while( current && strcmp(word, current->voc.word) != 0 ) {
 		
 		if( strcmp(word, current->voc.word) > 0 ){
-			printf("from %s, move right!!\n", current->voc.word);
+			printf("현재 노드  [%s] (오른쪽으로 이동)\n", current->voc.word);
 			current = current->right;
 		}
 		else{
-			printf("from %s, move left!!\n", current->voc.word);
+			printf("현재 노드  [%s] (왼쪽으로 이동)\n", current->voc.word);
 			current = current->left;
-		}
-			
+		}	
 	}
-
+	if(!current){
+		printf("\n단어가 존재하지 않습니다.\n\n");
+	}
+	else{
+		printf("\n단어를 찾았습니다\n단어 : %s\n의미: %s\n", current->voc.word, current->voc.meaning);
+		
+	} 
+	//printf("Avl tree 를 이용한 단어 탐색 끝\n");
 	return current;
-}
-
-/* Do a depth first traverse of a node. */
-void avl_traverse_node_dfs( AvlNode *node, int depth ) {
-	int i = 0;
-
-	if( node->left ) avl_traverse_node_dfs( node->left, depth + 2 );
-
-	for( i = 0; i < depth; i++ ) putchar( ' ' );
-	printf( "%d: %d\n", node->voc, getBalanceFactor( node ) );
-
-	if( node->right ) avl_traverse_node_dfs( node->right, depth + 2 );
-}
-
-/* Do a depth first traverse of a tree. */
-void avl_traverse_dfs( AvlTree *tree ) {
-	avl_traverse_node_dfs( tree->root, 0 );
 }
 
 void data_init(AvlTree** root){
@@ -270,14 +262,9 @@ void data_init(AvlTree** root){
 	
     while(fgets(inp,buf_size,fp)){
         if(strlen(inp) != 1){
-//            printf("------- \n");
-//            printf("입력받은 문장 : %s\n" , inp);
-//			printf("문자열의 길이 : %d \n" , strlen(inp));
             token = strtok(inp, ">");
             int index = 0;
             while(token != NULL){
-            	//printf("token = %s\n", token);
-            	
             	if(index == 0){
             		strcpy(voc.word, token);
 				}else{
@@ -288,22 +275,15 @@ void data_init(AvlTree** root){
 			}
 			
 			AvlInsert(*root, voc);
-			
-//			printf("word : %s", word);
-//			printf("meaning : %s", meaning);
-//			
-//			
-//            printf("------- \n");
         }
     }
-    printf("inserting end\n");
     fclose(fp);
 }
 
 AvlNode* inorderTraveling(AvlNode* root){
 	if(root != NULL){
 		inorderTraveling(root->left);
-		printf("[%s] ", root->voc.word);
+		printf("%s : %s \n", root->voc.word, root->voc.meaning);
 		inorderTraveling(root->right);
 	}
 }
@@ -320,38 +300,38 @@ int main( int argc, char **argv ) {
 	data_init(&tree);
 	char cmd[5], keyword[50];
 	while(1){
-		printf("-----------------------------------\n"); 
+		printf("-----------------------------------\n");
 		printf("1. 단어 추가\n");
 		printf("2. 단어 검색\n");
 		printf("3. 단어 목록 내림차순으로 보기\n");
 		printf("4. 종료\n");
 		printf("-----------------------------------\n");
+		printf("무엇을 하시겠습니까? : ");
 		scanf("%s", cmd);
 		if(strcmp(cmd, "1") == 0){
-			printf("Input the word : ");
+			system("cls");
+			printf("단어 : ");
 			scanf("%s", voc.word);
-			printf("Input the meaning : ");
+			printf("의미 : ");
 			scanf("%s", voc.meaning);
+			system("cls"); 
 			AvlInsert(tree, voc);
 		}
 		if(strcmp(cmd,"2") == 0){
-			printf("Input the keyword : ");
+			system("cls");
+			printf("찾고자하는 단어 입력 : ");
 			scanf("%s", keyword);
-			printf("-----from here search start--------\n");
+			system("cls");
 			AvlFind(tree, keyword);
-			
-			
 		}
 		if(strcmp(cmd,"3") == 0){
+			system("cls");
 			inorderTraveling(tree->root);
+			printf("\n");
 		}
 		if(strcmp(cmd,"4") == 0){
 			break;
 		}
 	} 
-	
-	
-	//avl_traverse_dfs( tree );
-
 	return 0;
 }
