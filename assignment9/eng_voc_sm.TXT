@@ -1,199 +1,12 @@
-blurb>n.(신간서적의커버에 인쇄하는)자가선전광고
-blurry>a.더러워진
-blurt>vt.부지중에 입밖에 내다
-blush>vi.얼굴을 붉히다
-exploratory>adj.탐험의
-explore>vt.vi.탐험하다
-fishbowl>n.(유리)어항
-disburden>vt.짐을 내리다
-disburse>vt.지불하다
-disbursement>n.지불
-discalced>adj.(수도사가)맨발의
-discard>vt.버리다
-discern>vt.분별하다
-discerning>a.통찰력있는
-discernment>n.식별력
-discharge>vt.짐을부리다
-discharger>n.짐을 부리는 사람
-disci>disk의 연결형
-disciple>n.제자
-discipleship>n.제자의 신분
-expiration>n.종결
-expiratory>adj.속죄의
-expire>vi.끝나다
-expiry>n.종료
-explain>vt.설명하다
-explain away>잘 해명하다
-explainable>adj.설명(해석)할 수 있는
-explanation>n.설명
-explanatorily>ad.설명적으로
-explanatory>a.설명의
-explant>vt.-을 외식(체외 배양)하다 n.외식체
-explantation>n.외식
-expletive>a.부가적인
-explicable>a.설명할 수 있는
-explicate>vt.상설하다
-explication>n.해설
-explicative>adj.해설하는
-explicatory>adj.해설하는
-explicit>a.명백한
-explicitly>ad.명백히
-explode>vt.폭발시키다
-exploder>n.폭발시키는 사람
-exploit>vt.개발하다
-exploitation>n.이용
-exploration>n.실지답사
-explorative>adj.탐험의
-exploratory>adj.탐험의
-explore>vt.vi.탐험하다
-fishbowl>n.(유리)어항
-fisher>n.어부
-fisherman>n.어부
-fishery>n.어업(권)
-fishhook>n.낚시바늘
-fishily>ad.물고기 같이
-fishiness>n.물고기
-fishing>n.고기잡이
-fishlike>a.물고기같은
-fishline>n.낚싯줄
-fishmonger>n.어물상
-fishplate>n.이음판
-fishpond>n.양어지
-fishtail>adj.물고기 꼬리 비슷한
-fishwife>n.생선파는 여자
-fishworm>n.(낚시 미끼용)지렁이
-incapacitate>vt.무능력하게 하다
-incapacitation>n.자격박탈
-incapacity>n.무능
-incarcerate>vt.감금하다
-incarceration>n.감금
-macaber>a.섬뜩한
-macabre>a.섬뜩한
-macaco>n.여우원숭이
-macadam>n.(롤러로 굳히는)쇄석
-macaque>n.짧은 꼬리원숭이(아시아,아프리카산)
-macaroni>I
-macaronic>a.마카로니의
-macaroon>n.마카롱(달걀흰자,아먼드,설탕으로 만든 작은 과자)
-macassar>n.마카사르 향유(머릿기름)
-macaw>n.마코앵무새
-mace>n.갈고리 달린 철퇴
-macerate>vt.담가서 부드럽게하다
-mach number>마하(물체속도의 음속에 대한 비)
-machete>n.(중남미 원주민의)날이 넓은 칼
-machicolate>vt.총안을 만들다
-machicolation>n.(입구,통로 위에)불쑥 나온 총안
-machinate>vt.vi.모의하다
-machination>n.음모를 획책함
-machinator>n.모사
-machine>n.기계
-machine language>(컴퓨터)기계 언어
-nicotine>n.니코틴
-nicotinism>n.니코틴중독
-nictate>vi.눈을 깜박 거리다
-nictitate>vi.눈을 깜박 거리다
-niddering>adj.비겁한 n.비겁한 사람
-nidering>adj.비겁한 n.비겁한 사
-nidificate>vi.둥우리를 만들다
-nidification>n.둥우리 만들기
-nidify>vi.둥우리를 만들다
-nidus>n.둥지
-niece>n.조카딸
-nielli>n.흑금의 복수
-niello>n.흑금 vi.흑금으로 장식하다
-niff>n.악취 vi.악취가 나다
-niffy>a.악취가 나는
-nifty>a.멋진
-niggard>n.구두쇠
-niggardly>a.인색한 ad.쩨쩨하게
-planet>n.행성
-planetarium>n.천상의
-planetary>a.행성의
-planetesimal>adj.미행성체의 n.미행성체
-planetoid>n.소행성
-planform>n.평면 도형(위에서 본 날개 따위의 형상)
-plangent>adj.밀려와 부딪치는
-planimeter>n.측면기
-planish>vt.두드려서 편평하게 하다
-planisphere>n.평면 구형도
-plank>n.두꺼운 판자
-planking>n.판자 깔기
-plankter>n.플랑크톤 생물
-plankton>n.플랑크톤
-planless>adj.도면이 없는
-planned>adj.계획의
-planner>n.계획자
-planometer>n.평면계
-plant>n.실물
-plantain>n.질경이
-plantar>adj.발바닥의
-plantation>n.대농원
-quilling>n.대롱모양의 주름을 잡음
-quilt>n.이불
-quilting>n.누빔
-quina>n.=cinchona
-quinary>adj.다섯의
-quince>n.마르멜로(열매나무)
-quincentenary>adj.500년의
-quincentennial>adj.500년의
-quincuncial>adj.다섯 눈모양의
-quincunx>n.다섯 눈 모양
-quingentenary>adj.=quincentenary
-quinidine>n.심장병,말라리아의 치료약
-quinine>n.키니네
-quinoline>n.(화학)퀴놀린
-quinquagenarian>adj.50십대의 n.50대의 사람
-quinquagenary>a.50대의 n.50세의 사람
-quinquangular>a.5각형의
-rev.>목사(Reverend)의 약자
-revalorization>n.(통화의)가치를 변경함
-revaluation>n.재평가
-revalue>vt.재평가하다
-revamp>vt.조각을 덧대다
-revanche>n.복수
-revanchism>n.복수
-machinator>n.모사
-machine>n.기계
-machine language>(컴퓨터)기계 언어
-nicotine>n.니코틴
-nicotinism>n.니코틴중독
-fisher>n.어부
-fisherman>n.어부
-fishery>n.어업(권)
-fishhook>n.낚시바늘
-fishily>ad.물고기 같이
-fishiness>n.물고기
-fishing>n.고기잡이
-fishlike>a.물고기같은
-fishline>n.낚싯줄
-fishmonger>n.어물상
-fishplate>n.이음판
-fishpond>n.양어지
-fishtail>adj.물고기 꼬리 비슷한
-fishwife>n.생선파는 여자
-fishworm>n.(낚시 미끼용)지렁이
-fishy>a.물고기의
-fisk>n.국고
-fissile>adj.쪼개지기 쉬운
-fissility>n.분열성
-fission>n.열개
-fissionable>adj.핵분열성의
-fissure>n.째진틈
-fist>n.주먹
-fistfight>n.주먹싸움
-fistic>a.권투의
-fisticuffs>n.주먹다짐
-fistula>n.관상 기관
-fistulae>n.관상 기관
-fistular>adj.관상의
-blushingly>ad.얼굴을 붉히고
-bluster>vi.사납게 몰아치다
-blustering>a.사납게 불어치는
-blusterous>a=blustering
-blustery>a.=blustering
-blvd.>n.넓은 가로수길(=boulevard)
-disastrously>ad.비참하게
-disavow>vt.거부하다
+a>영어 알파벳의 첫번째 글자 a.최초의
+a few>조금은 있는
+a fond>충분히
+a fortiori>한층 유력한 이유로
+a good many>상당히 많은
+a great many>굉장히 많은
+a la mode>유행의
+a little>조금은
+a lot of>많은(=lots of)
 a.d.>그리스도기원
 a.m.>오전
 ab>n.학사(Artium Baccalaureus
@@ -201,984 +14,568 @@ aba>n.낙타(염소)의 털로 짠 옷감
 abaca>n.마닐라삼(필리핀 주산)
 abaci>n.abcus의 복수형
 aback>ad.뒤로
-niello>n.흑금 vi.흑금으로 장식하다
-niff>n.악취 vi.악취가 나다
-blurb>n.(신간서적의커버에 인쇄하는)자가선전광고
-blurry>a.더러워진
-blurt>vt.부지중에 입밖에 내다
-blush>vi.얼굴을 붉히다
-exploratory>adj.탐험의
-explore>vt.vi.탐험하다
-fishbowl>n.(유리)어항
-incapacitate>vt.무능력하게 하다
-incapacitation>n.자격박탈
-incapacity>n.무능
-incarcerate>vt.감금하다
-incarceration>n.감금
-macaber>a.섬뜩한
-macabre>a.섬뜩한
-macaco>n.여우원숭이
-macadam>n.(롤러로 굳히는)쇄석
-macaque>n.짧은 꼬리원숭이(아시아,아프리카산)
-macaroni>I
-macaronic>a.마카로니의
-macaroon>n.마카롱(달걀흰자,아먼드,설탕으로 만든 작은 과자)
-macassar>n.마카사르 향유(머릿기름)
-macaw>n.마코앵무새
-mace>n.갈고리 달린 철퇴
-macerate>vt.담가서 부드럽게하다
-mach number>마하(물체속도의 음속에 대한 비)
-machete>n.(중남미 원주민의)날이 넓은 칼
-machicolate>vt.총안을 만들다
-machicolation>n.(입구,통로 위에)불쑥 나온 총안
-niffy>a.악취가 나는
-nifty>a.멋진
-niggard>n.구두쇠
-niggardly>a.인색한 ad.쩨쩨하게
-planet>n.행성
-planetarium>n.천상의
-planetary>a.행성의
-planetesimal>adj.미행성체의 n.미행성체
-planetoid>n.소행성
-incarceration>n.감금
-macaber>a.섬뜩한
-macabre>a.섬뜩한
-macaco>n.여우원숭이
-macadam>n.(롤러로 굳히는)쇄석
-macaque>n.짧은 꼬리원숭이(아시아,아프리카산)
-macaroni>I
-macaronic>a.마카로니의
-macaroon>n.마카롱(달걀흰자,아먼드,설탕으로 만든 작은 과자)
-macassar>n.마카사르 향유(머릿기름)
-macaw>n.마코앵무새
-mace>n.갈고리 달린 철퇴
-macerate>vt.담가서 부드럽게하다
-mach number>마하(물체속도의 음속에 대한 비)
-machete>n.(중남미 원주민의)날이 넓은 칼
-machicolate>vt.총안을 만들다
-machicolation>n.(입구,통로 위에)불쑥 나온 총안
-machinate>vt.vi.모의하다
-machination>n.음모를 획책함
-machinator>n.모사
-machine>n.기계
-machine language>(컴퓨터)기계 언어
-nicotine>n.니코틴
-nicotinism>n.니코틴중독
-fisher>n.어부
-fisherman>n.어부
-fishery>n.어업(권)
-fishhook>n.낚시바늘
-fishily>ad.물고기 같이
-fishiness>n.물고기
-fishing>n.고기잡이
-fishlike>a.물고기같은
-fishline>n.낚싯줄
-fishmonger>n.어물상
-fishplate>n.이음판
-fishpond>n.양어지
-fishtail>adj.물고기 꼬리 비슷한
-fishwife>n.생선파는 여자
-fishworm>n.(낚시 미끼용)지렁이
-fishy>a.물고기의
-fisk>n.국고
-fissile>adj.쪼개지기 쉬운
-fissility>n.분열성
-fission>n.열개
-fissionable>adj.핵분열성의
-fissure>n.째진틈
-fist>n.주먹
-fistfight>n.주먹싸움
-fistic>a.권투의
-fisticuffs>n.주먹다짐
-fistula>n.관상 기관
-fistulae>n.관상 기관
-fistular>adj.관상의
-blushingly>ad.얼굴을 붉히고
-bluster>vi.사납게 몰아치다
-blustering>a.사납게 불어치는
-blusterous>a=blustering
-blustery>a.=blustering
-blvd.>n.넓은 가로수길(=boulevard)
-disastrously>ad.비참하게
-disavow>vt.거부하다
-a.d.>그리스도기원
-a.m.>오전
-ab>n.학사(Artium Baccalaureus
-aba>n.낙타(염소)의 털로 짠 옷감
-abaca>n.마닐라삼(필리핀 주산)
-abaci>n.abcus의 복수형
-aback>ad.뒤로
-niello>n.흑금 vi.흑금으로 장식하다
-niff>n.악취 vi.악취가 나다
-blurb>n.(신간서적의커버에 인쇄하는)자가선전광고
-blurry>a.더러워진
-blurt>vt.부지중에 입밖에 내다
-blush>vi.얼굴을 붉히다
-exploratory>adj.탐험의
-explore>vt.vi.탐험하다
-fishbowl>n.(유리)어항
-incapacitate>vt.무능력하게 하다
-incapacitation>n.자격박탈
-incapacity>n.무능
-incarcerate>vt.감금하다
-incarceration>n.감금
-macaber>a.섬뜩한
-macabre>a.섬뜩한
-macaco>n.여우원숭이
-macadam>n.(롤러로 굳히는)쇄석
-macaque>n.짧은 꼬리원숭이(아시아,아프리카산)
-macaroni>I
-macaronic>a.마카로니의
-macaroon>n.마카롱(달걀흰자,아먼드,설탕으로 만든 작은 과자)
-macassar>n.마카사르 향유(머릿기름)
-macaw>n.마코앵무새
-mace>n.갈고리 달린 철퇴
-macerate>vt.담가서 부드럽게하다
-mach number>마하(물체속도의 음속에 대한 비)
-machete>n.(중남미 원주민의)날이 넓은 칼
-machicolate>vt.총안을 만들다
-machicolation>n.(입구,통로 위에)불쑥 나온 총안
-niffy>a.악취가 나는
-nifty>a.멋진
-niggard>n.구두쇠
-niggardly>a.인색한 ad.쩨쩨하게
-planet>n.행성
-planetarium>n.천상의
-planetary>a.행성의
-planetesimal>adj.미행성체의 n.미행성체
-planetoid>n.소행성
-planform>n.평면 도형(위에서 본 날개 따위의 형상)
-plangent>adj.밀려와 부딪치는
-planimeter>n.측면기
-planish>vt.두드려서 편평하게 하다
-planisphere>n.평면 구형도
-plank>n.두꺼운 판자
-planking>n.판자 깔기
-plankter>n.플랑크톤 생물
-plankton>n.플랑크톤
-planless>adj.도면이 없는
-planned>adj.계획의
-planner>n.계획자
-planometer>n.평면계
-plant>n.실물
-plantain>n.질경이
-plantar>adj.발바닥의
-plantation>n.대농원
-quilling>n.대롱모양의 주름을 잡음
-quilt>n.이불
-quilting>n.누빔
-quina>n.=cinchona
-quinary>adj.다섯의
-quince>n.마르멜로(열매나무)
-quincentenary>adj.500년의
-quincentennial>adj.500년의
-quincuncial>adj.다섯 눈모양의
-quincunx>n.다섯 눈 모양
-quingentenary>adj.=quincentenary
-quinidine>n.심장병,말라리아의 치료약
-quinine>n.키니네
-quinoline>n.(화학)퀴놀린
-quinquagenarian>adj.50십대의 n.50대의 사람
-quinquagenary>a.50대의 n.50세의 사람
-quinquangular>a.5각형의
-rev.>목사(Reverend)의 약자
-revalorization>n.(통화의)가치를 변경함
-revaluation>n.재평가
-revalue>vt.재평가하다
-revamp>vt.조각을 덧대다
-revanche>n.복수
-revanchism>n.복수
-revanchist>n.adj.복수자(의)
-reveal>vt.나타내다
-reveille>n.기상나팔
-revel>vt.vi.술판을 즐기다
 abacus>n.계산기
 abaft>ad.(배의)고물에
 abalone>abalone
 abandon>vt.버리다
 abandoned>a.버림받은
-blunderingly>ad.실수로
-blunge>vt.(도토따위를)물과 섞어 반죽하다
-blunt>a.무딘
-bluntly>ad.무디게
-blur>vi.흐려지다 vt.더럽히다 n.더러움
-disavowal>n.부인
-disband>vt.해산하다
-disbandment>n.해산
-disbar>vt.변호사자격을 박탈하다
-terrace>n.계단모양의 뜰(광장)
-terracotta>n.테라코타(점토의 질그릇)테라코타 건축재
-terrain>n.지형
-terrane>n.지층
-terrapin>n.식용남생이(북미산)
-terraqueous>adj.수륙의
-terraria>n.terrarium의 복수
-terrarium>n.육생동물 사육장
-terrazzo>n.테라초
-terrene>adj.지구의
-terrestrial>a.지구의
-terret>n.(안장의)고삐꾀는 고리
-uric>a.오줌의
-urinal>n.소변기
-urinalysis>n.오줌분석
-urinary>a.오줌의
-urinate>vi.소변을 보다
-urination>n.배뇨(작용)
-urine>n.소변
-urn>n.항아리
-urogenital>adj.비뇨생식기의
-urologist>n.비뇨기과 전문의
-urology>n.비뇨기학
-ursine>a.곰의
-urticaria>n.두드러기
-urus>n.=aurochs
-us>pron.우리들을(에게)
-usability>adj.사용할 수 있는
-usable>a.사용할 수 있는
-usableness>n.쓸모있음
-usage>n.관용법
-usance>n.외국환어음지급유예기간
-woodless>adj.재목이 없는
-woodlot>n.식림용지
-woodman>n.나무꾼
-woodnote>n.숲의 노랫가락
-woodpecker>n.딱따구리
-woodpile>n.장작을 쌓은 더미
-woodruff>n.선갈퀴
-woodshed>n.장작두는 곳
-woodsman>n.숲에 사는 사람
-woodsy>a.숲의
-woodwind>n.목관 악기류
-woodwork>n.목조부
-woodworker>n.목세공인
-woodworking>n.목공의
-woodworm>n.나무좀
-woody>a.수목이 많은
-wooer>n.구혼자
-woof>n.씨(줄)
-woofer>n.저음역용 확성기
-wool>n.양모
-woolen>a.양모의
-woolfell>n.털이 붙은 채로의 양가죽
-woolgathering>n.양털 걷어 모으기 adj.방심한
-woolgrower>n.목양업자
-woollen>=woolen
-xystus>n.옥내 경기장
-XYZ>int.(속어)지퍼 주의(바지앞 지퍼가 였렸음을 지적)
-y.m.c.a.>기독교 청년회(Young Men Christian Association)
-y.w.c.a.>기독교 여청회(Young Women Christian Association)
-yabber>n.수다
-yabby>n.호주산의 작은 가재
-yacht>n.요트 vt.vi.요트를 타다
-yellowtail>n.방어류
-yellowwood>n.제목이 노란 나무
-yellowy>a.누르스름한
-yelp>vt.vi.깽깽 짖다 n.개 짖는 소리
-yen>n.야심
-yeoman>I9U
-yeomanly>I9U
-yeomanry>I9U
-yep>ad.=yes
-yes>ad.예
-yesman>n.아첨꾼
-yesterday>n.ad.어제
-yestereve>n.어젯 저녁
-yestereven>n.어젯 저녁
-yesterevening>n.어젯 저녁
-yestermorn>n.어젯 아침
-yestermorning>n.어제 아침
-yesternight>n.간밤
-yesteryear>n.작년
-yestreen>n.지난밤
-yet>ad.아직
-yeti>n.히말라야산맥의 설인
-yew>n.주목
-yid>n.유태인
-yield>vi.산출하다
-yielding>a.다산의
-yieldingly>ad.압력에 대해 유연하게
-yin>n.음
-yip>vi.깽깽 울다 vt.새된 소리로 말하다 n.깽깽하는 소리
-yippee>int.야, 만세
-yippie>n.이피(족)(hippie보다도 정치색짙은 반체제 젊은이)
-yo>int.여어(격려,경고의 소리)
-yob>n.신병
-yobbo>n.=yob
-yobo>n.=yob
-yogh>n.요호(중세 영어의 자모)
-yoghourt>n.요구르트
-yoghurt>n.요구르트
-yogi>n.요가수도자
-yogism>n.요가의 수행
-yogurt>n.요구르트
-yoicks>int.vi.쉿(하고 소리치다) vt.쉿 하고 부추기다
-yoke>n.지배
-yoke bone>광대뼈
-yokefellow>n.(일따위의)동료
-yokel>n.촌놈
-yokelines>I57<1
-yokemate>n.=yokefellow
-yolk>n.노른자위
-yolky>adj.노른자위의
-yon>adj.ad.pron.=yonder
-yond>adj.ad.pron.=yonder
-yonder>a.저쪽의 ad.저쪽에 pron.저쪽에 있는 것
-yore>ad.옛날 옛적
-york>n.요크
-yorker>n.(크리켓)배트의 바로 밑에 떨어지게 떨어진 공
-you>pron.당신
-young>a.젊은
-youngberry>n.검은 딸기
-younger>adj.(형제,자매에서)연하쪽의 n.(보통)젊은이
-youngest>n.최연소자
-youngish>a.다소(아직)젊은
-youngling>n.애송이
-youngster>n.소년
-younker>n.젊은이
-your>pron.당신의
-yours>pron.당신의 것
-yourself>pron.당신 자신
-youth>n.청년
-youthful>a.젊은
-zygote>n.접합자(체)
-zymase>n.치마아제
-zyme>n.전염병의 병원체
-zymogen>n.치모겐
-zymogenic>n.발효를 일으키는
-zymologist>n.발효학자
-zymology>n.발효학
-zymometer>n.발효도 측정계
-zymosimeter>n.발효도 측정계
-zymosis>n.발효
-zymotechnics>n.양조법
-yodel>n.요들 vi.요들을 부르다
-yoga>n.요가(의 도)
-yogh>n.요호(중세 영어의 자모)
-yoghourt>n.요구르트
-yoghurt>n.요구르트
-yogi>n.요가수도자
-yogism>n.요가의 수행
-yogurt>n.요구르트
-yoicks>int.vi.쉿(하고 소리치다) vt.쉿 하고 부추기다
-yoke>n.지배
-yoke bone>광대뼈
-yokefellow>n.(일따위의)동료
-yokel>n.촌놈
-yokelines>I57<1
-yokemate>n.=yokefellow
-yolk>n.노른자위
-yolky>adj.노른자위의
-yon>adj.ad.pron.=yonder
-yond>adj.ad.pron.=yonder
-yonder>a.저쪽의 ad.저쪽에 pron.저쪽에 있는 것
-yore>ad.옛날 옛적
-york>n.요크
-yorker>n.(크리켓)배트의 바로 밑에 떨어지게 떨어진 공
-you>pron.당신
-young>a.젊은
-youngberry>n.검은 딸기
-younger>adj.(형제,자매에서)연하쪽의 n.(보통)젊은이
-youngest>n.최연소자
-youngish>a.다소(아직)젊은
-youngling>n.애송이
-youngster>n.소년
-younker>n.젊은이
-your>pron.당신의
-yours>pron.당신의 것
-yourself>pron.당신 자신
-youth>n.청년
-youthful>a.젊은
-zygote>n.접합자(체)
-zymase>n.치마아제
-zyme>n.전염병의 병원체
-yachting>n.요트 조정술
-yachtsman>n.요트 조종자(소유자
-yaffil>n.청딱다구리
-yaffle>n.청딱다구리
-yager>n.=jaeger
-yah>int.야아
-yahoo>n.인간의 모습을 한 짐승
-yak>n.소련의 전투기
-yakka>n.날카로운 커브
-yale lock>예일 자물쇠
-yalta conference>얄타 회담
-yam>n.참마속의 식물
-yamen>n.아문
-yammer>vi.한탄하다
-yamun>n.아문
-yang>n.양
-yank>vi.홱 잡아당기다
-Yankee> 미국 사람 양키의, 양키식의 북부 사람
-yannigan>n.2군의 프로 선수
-yap>vi.개가 요란하게 짖어대다
-yapp>n.야프형 제본
-yapped>adj.야프형 제본의
-yar dmeasure>야드 자
-yard>n.안마당
-yard grass>왕바랭이
-disbarment>n.자격 박탈
-disbelief>n.불신
-revelator>n.계시자
-revelatory>adj.천계(계시)의
-reveler>n.주연을 베푸는 사람
-reveller>n.주연을 베푸는 사람
-revelry>n.흥청망청 마시며 떠들기
-revenant>n.긴 여행에서 돌아온 사람
-revenge>n.복수
-revengeful>adj.복수심에 불탄
-searching>n.수색함 adj.엄중한
-searchlight>n.탐조등
-seascape>n.해경(화)
-seashell>n.조개
-seashore>n.해안
-seasick>adj.배멀미가 난 n.배멀미
-seasickness>n.배멀미
-seaside>n.해변 adj.해안의
-season>n.계절
-seasonable>adj.철에 알맞은
-seasonableness>n.철에 맞음
-seasonably>ad.계절에 알맞게
-seasonal>adj.계절의
-seasoned>adj.조미한
-seasoner>n.맛을 내는 사람
-seasoning>n.조미(료)
-seat>n.좌석
-seater>n.(자동차,비행기의) 인승
-seating>n.좌석(수)
-seawall>안벽
-seaward>adj.바다로 향한
-seawards>ad.바다쪽으로
-seawater>바닷물
-tern>n.제비갈매기
-ternary>adj.셋의
-ternate>adj.셋으로 된
-terne>n.턴메탈
-terneplate>n.턴플레이트
-terpene>n.테르펜
-terra>n.흙
-terra cotta>테라코타(이탈리아의 붉은 점토로 만든 오지그릇)
-terrace>n.계단모양의 뜰(광장)
-terracotta>n.테라코타(점토의 질그릇)테라코타 건축재
-terrain>n.지형
-terrane>n.지층
-terrapin>n.식용남생이(북미산)
-terraqueous>adj.수륙의
-terraria>n.terrarium의 복수
-terrarium>n.육생동물 사육장
-terrazzo>n.테라초
-terrene>adj.지구의
-terrestrial>a.지구의
-terret>n.(안장의)고삐꾀는 고리
-uric>a.오줌의
-disbelieve>vt.vi.믿지않다
-disbench>vt.-의 법학원 이사의 직을 박탁하다
-disbranch>vt.가지를 치다
-disbud>vt.싹을 따내다
-disburden>vt.짐을 내리다
-disburse>vt.지불하다
-disbursement>n.지불
-discalced>adj.(수도사가)맨발의
-discard>vt.버리다
-discern>vt.분별하다
-discerning>a.통찰력있는
-discernment>n.식별력
-discharge>vt.짐을부리다
-discharger>n.짐을 부리는 사람
-disci>disk의 연결형
-disciple>n.제자
-discipleship>n.제자의 신분
-expiration>n.종결
-expiratory>adj.속죄의
-expire>vi.끝나다
-expiry>n.종료
-explain>vt.설명하다
-explain away>잘 해명하다
-explainable>adj.설명(해석)할 수 있는
-explanation>n.설명
-explanatorily>ad.설명적으로
-explanatory>a.설명의
-explant>vt.-을 외식(체외 배양)하다 n.외식체
-explantation>n.외식
-expletive>a.부가적인
-explicable>a.설명할 수 있는
-explicate>vt.상설하다
-explication>n.해설
-explicative>adj.해설하는
-explicatory>adj.해설하는
-explicit>a.명백한
-explicitly>ad.명백히
-explode>vt.폭발시키다
-exploder>n.폭발시키는 사람
-exploit>vt.개발하다
-exploitation>n.이용
-exploration>n.실지답사
-explorative>adj.탐험의
-exploratory>adj.탐험의
-explore>vt.vi.탐험하다
-fishbowl>n.(유리)어항
-fisher>n.어부
-fisherman>n.어부
-fishery>n.어업(권)
-fishhook>n.낚시바늘
-fishily>ad.물고기 같이
-fishiness>n.물고기
-fishing>n.고기잡이
-fishlike>a.물고기같은
-fishline>n.낚싯줄
-fishmonger>n.어물상
-fishplate>n.이음판
-fishpond>n.양어지
-fishtail>adj.물고기 꼬리 비슷한
-fishwife>n.생선파는 여자
-fishworm>n.(낚시 미끼용)지렁이
-fishy>a.물고기의
-fisk>n.국고
-fissile>adj.쪼개지기 쉬운
-fissility>n.분열성
-fission>n.열개
-fissionable>adj.핵분열성의
-fissure>n.째진틈
-fist>n.주먹
-fistfight>n.주먹싸움
-fistic>a.권투의
-fisticuffs>n.주먹다짐
-fistula>n.관상 기관
-fistulae>n.관상 기관
-fistular>adj.관상의
-fistulous>adj.관상의
-fit>a.맞는
-fit in>-에 맞추다
-hawthorn>n.산사나무
-hay>n.건초
-hay fever>건초열
-haybox>n.건초통
-haycock>n.건초더미
-hayfield>n.건초밭
-hayfork>n.건초용 쇠스랑
-hayloft>n.건초창고
-haymaker>n.건초기
-haymow>n.헛간속의 건초더미
-hayrack>n.꼴(건초)시렁
-hayrick>n.(큰)건초더미(=haystack)
-hayseed>n.흘린 건초의 씨
-hayshaker>n.촌뜨기
-haystack>n.(큰)건초더미
-haywire>adj.뒤얽힌
-hazard>n.위험
-hazardous>adj.모험적인
-haze>n.엷은안개
-hazel>n.개암나무
-hazelnut>n.개암
-hazily>ad.흐릿하게
-hazy>adj.흐릿한
-he>n.(3인칭단수 남성)그
-head>n.머리
-head back>-의 앞으로 돌다
-head cold>코감기
-head for>진행하다
-head gate>수문
-head lamp>헤드라이트
-inasmuch>ad.-이므로
-inattention>n.부주의
-inattentive>adj.부주의한
-inattentively>ad.부주의하게
-inaudibility>n.들리지않음
-inaudible>a.알아들을 수 없는
-inaudibly>ad.들리지않을 정도로
-inaugural>a.취임의
-inaugurate>vt.취임식을 거행하다
-inauguration>n.정식개시
-inaugurator>n.취임시키는 사람
-inauspicious>a.불길한
-inboard>a.ad.선내의(에)
-inborn>a.타고난
-inbound>a.본국으로 돌아가는
-inbreathe>vt.빨아들이다
-inbred>a.타고난
-inbreed>vt.내부에 생기게 하다
-inbreeding>n.동종교배
-incalculable>a.헤아릴 수 없는
-incalculably>ad.무한적으로
-incandesce>n.백열(광)
-incandescence>n.백열광
-incandescent>adj.백열의
-incantation>n.주문
-incapability>n.무능
-incapable>a.할 수 없는
-incapacitant>n.행동불능 화학제
-incapacitate>vt.무능력하게 하다
-incapacitation>n.자격박탈
-incapacity>n.무능
-incarcerate>vt.감금하다
-incarceration>n.감금
-macaber>a.섬뜩한
-macabre>a.섬뜩한
-macaco>n.여우원숭이
-macadam>n.(롤러로 굳히는)쇄석
-macaque>n.짧은 꼬리원숭이(아시아,아프리카산)
-macaroni>I
-macaronic>a.마카로니의
-macaroon>n.마카롱(달걀흰자,아먼드,설탕으로 만든 작은 과자)
-macassar>n.마카사르 향유(머릿기름)
-macaw>n.마코앵무새
-mace>n.갈고리 달린 철퇴
-macerate>vt.담가서 부드럽게하다
-mach number>마하(물체속도의 음속에 대한 비)
-machete>n.(중남미 원주민의)날이 넓은 칼
-machicolate>vt.총안을 만들다
-machicolation>n.(입구,통로 위에)불쑥 나온 총안
-machinate>vt.vi.모의하다
-machination>n.음모를 획책함
-machinator>n.모사
-machine>n.기계
-machine language>(컴퓨터)기계 언어
-nicotine>n.니코틴
-nicotinism>n.니코틴중독
-nictate>vi.눈을 깜박 거리다
-nictitate>vi.눈을 깜박 거리다
-niddering>adj.비겁한 n.비겁한 사람
-nidering>adj.비겁한 n.비겁한 사
-nidificate>vi.둥우리를 만들다
-nidification>n.둥우리 만들기
-nidify>vi.둥우리를 만들다
-nidus>n.둥지
-niece>n.조카딸
-nielli>n.흑금의 복수
-niello>n.흑금 vi.흑금으로 장식하다
-niff>n.악취 vi.악취가 나다
-niffy>a.악취가 나는
-nifty>a.멋진
-niggard>n.구두쇠
-niggardly>a.인색한 ad.쩨쩨하게
-planet>n.행성
-planetarium>n.천상의
-planetary>a.행성의
-planetesimal>adj.미행성체의 n.미행성체
-planetoid>n.소행성
-planform>n.평면 도형(위에서 본 날개 따위의 형상)
-plangent>adj.밀려와 부딪치는
-planimeter>n.측면기
-planish>vt.두드려서 편평하게 하다
-planisphere>n.평면 구형도
-plank>n.두꺼운 판자
-planking>n.판자 깔기
-plankter>n.플랑크톤 생물
-plankton>n.플랑크톤
-planless>adj.도면이 없는
-planned>adj.계획의
-planner>n.계획자
-planometer>n.평면계
-plant>n.실물
-plantain>n.질경이
-plantar>adj.발바닥의
-plantation>n.대농원
-quilling>n.대롱모양의 주름을 잡음
-quilt>n.이불
-quilting>n.누빔
-quina>n.=cinchona
-quinary>adj.다섯의
-quince>n.마르멜로(열매나무)
-quincentenary>adj.500년의
-quincentennial>adj.500년의
-quincuncial>adj.다섯 눈모양의
-quincunx>n.다섯 눈 모양
-quingentenary>adj.=quincentenary
-quinidine>n.심장병,말라리아의 치료약
-quinine>n.키니네
-quinoline>n.(화학)퀴놀린
-quinquagenarian>adj.50십대의 n.50대의 사람
-quinquagenary>a.50대의 n.50세의 사람
-quinquangular>a.5각형의
-rev.>목사(Reverend)의 약자
-revalorization>n.(통화의)가치를 변경함
-revaluation>n.재평가
-revalue>vt.재평가하다
-revamp>vt.조각을 덧대다
-revanche>n.복수
-revanchism>n.복수
-revanchist>n.adj.복수자(의)
-reveal>vt.나타내다
-reveille>n.기상나팔
-revel>vt.vi.술판을 즐기다
-revelation>n.폭로
-revelational>adj.천계(묵시)의
-revelationist>n.천계(계시)를 믿는 사람
-revelator>n.계시자
-revelatory>adj.천계(계시)의
-reveler>n.주연을 베푸는 사람
-reveller>n.주연을 베푸는 사람
-revelry>n.흥청망청 마시며 떠들기
-revenant>n.긴 여행에서 돌아온 사람
-revenge>n.복수
-revengeful>adj.복수심에 불탄
-searching>n.수색함 adj.엄중한
-searchlight>n.탐조등
-seascape>n.해경(화)
-seashell>n.조개
-seashore>n.해안
-seasick>adj.배멀미가 난 n.배멀미
-seasickness>n.배멀미
-seaside>n.해변 adj.해안의
-season>n.계절
-seasonable>adj.철에 알맞은
-seasonableness>n.철에 맞음
-seasonably>ad.계절에 알맞게
-seasonal>adj.계절의
-seasoned>adj.조미한
-seasoner>n.맛을 내는 사람
-seasoning>n.조미(료)
-seat>n.좌석
-seater>n.(자동차,비행기의) 인승
-seating>n.좌석(수)
-seawall>안벽
-seaward>adj.바다로 향한
-seawards>ad.바다쪽으로
-seawater>바닷물
-tern>n.제비갈매기
-ternary>adj.셋의
-ternate>adj.셋으로 된
-terne>n.턴메탈
-terneplate>n.턴플레이트
-terpene>n.테르펜
-terra>n.흙
-terra cotta>테라코타(이탈리아의 붉은 점토로 만든 오지그릇)
-terrace>n.계단모양의 뜰(광장)
-terracotta>n.테라코타(점토의 질그릇)테라코타 건축재
-terrain>n.지형
-terrane>n.지층
-terrapin>n.식용남생이(북미산)
-terraqueous>adj.수륙의
-terraria>n.terrarium의 복수
-terrarium>n.육생동물 사육장
-terrazzo>n.테라초
-terrene>adj.지구의
-terrestrial>a.지구의
-terret>n.(안장의)고삐꾀는 고리
-uric>a.오줌의
-urinal>n.소변기
-urinalysis>n.오줌분석
-urinary>a.오줌의
-urinate>vi.소변을 보다
-urination>n.배뇨(작용)
-urine>n.소변
-urn>n.항아리
-urogenital>adj.비뇨생식기의
-urologist>n.비뇨기과 전문의
-urology>n.비뇨기학
-ursine>a.곰의
-urticaria>n.두드러기
-urus>n.=aurochs
-us>pron.우리들을(에게)
-usability>adj.사용할 수 있는
-usable>a.사용할 수 있는
-usableness>n.쓸모있음
-usage>n.관용법
-usance>n.외국환어음지급유예기간
-woodless>adj.재목이 없는
-woodlot>n.식림용지
-woodman>n.나무꾼
-woodnote>n.숲의 노랫가락
-woodpecker>n.딱따구리
-woodpile>n.장작을 쌓은 더미
-woodruff>n.선갈퀴
-woodshed>n.장작두는 곳
-woodsman>n.숲에 사는 사람
-woodsy>a.숲의
-woodwind>n.목관 악기류
-woodwork>n.목조부
-woodworker>n.목세공인
-woodworking>n.목공의
-woodworm>n.나무좀
-woody>a.수목이 많은
-wooer>n.구혼자
-woof>n.씨(줄)
-woofer>n.저음역용 확성기
-wool>n.양모
-woolen>a.양모의
-woolfell>n.털이 붙은 채로의 양가죽
-woolgathering>n.양털 걷어 모으기 adj.방심한
-woolgrower>n.목양업자
-woollen>=woolen
-xystus>n.옥내 경기장
-XYZ>int.(속어)지퍼 주의(바지앞 지퍼가 였렸음을 지적)
-y.m.c.a.>기독교 청년회(Young Men Christian Association)
-y.w.c.a.>기독교 여청회(Young Women Christian Association)
-yabber>n.수다
-yabby>n.호주산의 작은 가재
-yacht>n.요트 vt.vi.요트를 타다
-yachting>n.요트 조정술
-yachtsman>n.요트 조종자(소유자
-yaffil>n.청딱다구리
-yaffle>n.청딱다구리
-yager>n.=jaeger
-yah>int.야아
-yahoo>n.인간의 모습을 한 짐승
-yak>n.소련의 전투기
-yakka>n.날카로운 커브
-yale lock>예일 자물쇠
-yalta conference>얄타 회담
-yam>n.참마속의 식물
-yamen>n.아문
-yammer>vi.한탄하다
-yamun>n.아문
-yang>n.양
-yank>vi.홱 잡아당기다
-Yankee> 미국 사람 양키의, 양키식의 북부 사람
-yannigan>n.2군의 프로 선수
-yap>vi.개가 요란하게 짖어대다
-yapp>n.야프형 제본
-yapped>adj.야프형 제본의
-yar dmeasure>야드 자
-yard>n.안마당
-yard grass>왕바랭이
-yard rope>활대 밧줄
-yardage>n.(가축등의)위탁 사용료
-yardarm>n.활대의 양쪽 끝
-yardman>n.조차장 작업원
-yardmaster>n.조차장장
-yardstick>n.야드자
-yardwand>n.=yardstick
-yarn>n.실
-yarovise>vi=jarovize
-yarrow>n.서양 톱풀
-yashmak>n.(이슬람교도 여자가 쓰는)긴 베일
-yataghan>n.(이슬람교도가 쓰는)긴 칼
-yate>n.호주의 유카리속의 나무의 일종
-yaup>=yawp
-yaw>n.한쪽으로 흔들림
-yawl>n.작은 범선
-yawn>n.하품
-yawning>adj.하품을 하고 있는
-yawningly>ad.하품을 하고
-yawp>vi.소리치다
-yaws>n.인도마마
-yclept>adj.-이라고 불리어지는
-ye>pron.너희들(thou의 복수형)
-yea>ad.그렇고 말고 n.긍정
-yeah>ad.=yes
-yean>vt.vi.(양,염소 등이)새끼를 낳다
-yeanling>n.새끼양(염소) a.갓 태어난
-year>n.연
-yearbook>n.연감
-yearling>n.한살박이
-yearlong>a.일년 계속의
-yearly>a.1년의
-yearn>vt.vi.그리워하다
-yearning>n.그리워함
-yearningly>ad.그리워 하여
-yearold>n.연
-yeast>n.누룩
-yeast cake>고체 이스트
-yeastiness>n.발효
-yeasty>a.효모의
-yegg>n.떠돌이 도둑
-yeggman>n.떠돌이 도둑
-yelk>n.=yolk
-yell>vt.vi.고함치다
-yell out>외치다
-yellow>a.황색의 n.황색
-yellow back>저속한 싸구려 소설
-yellow belly>겁쟁이
-yellow book>황서
-yellow fever>황열병
-yellow gum>갓난아기의 황달
-yellow jacket>말벌
-yellow journalism>선정주의
-yellow river>황하
-yellow sea>황해
-yellow spot>망막의 황반
-yellow streak>겁많은 거동
-yellowback>n.저속한 싸구려 소설
-yellowbelly>n.겁쟁이
-yellowbill>n.(미국산의)검둥오리
-yellowbird>n.각종 황색 명금
-yellowhammer>n.멧새의 일종
-yellowish>a.누르스름한
-yellowlegs>n.노랑박도요
-yellowness>n.노란색
-yellowstone>n.예로스톤 강
-yellowtail>n.방어류
-yellowwood>n.제목이 노란 나무
-yellowy>a.누르스름한
-yelp>vt.vi.깽깽 짖다 n.개 짖는 소리
-yen>n.야심
-yeoman>I9U
-yeomanly>I9U
-yeomanry>I9U
-yep>ad.=yes
-yes>ad.예
-yesman>n.아첨꾼
-yesterday>n.ad.어제
-yestereve>n.어젯 저녁
-yestereven>n.어젯 저녁
-yesterevening>n.어젯 저녁
-yestermorn>n.어젯 아침
-yestermorning>n.어제 아침
-yesternight>n.간밤
-yesteryear>n.작년
-yestreen>n.지난밤
-yet>ad.아직
-yeti>n.히말라야산맥의 설인
-yew>n.주목
-yid>n.유태인
-yield>vi.산출하다
-yielding>a.다산의
-yieldingly>ad.압력에 대해 유연하게
-yin>n.음
-yip>vi.깽깽 울다 vt.새된 소리로 말하다 n.깽깽하는 소리
-yippee>int.야, 만세
-yippie>n.이피(족)(hippie보다도 정치색짙은 반체제 젊은이)
-yo>int.여어(격려,경고의 소리)
-yob>n.신병
-yobbo>n.=yob
-yobo>n.=yob
-yodel>n.요들 vi.요들을 부르다
-yoga>n.요가(의 도)
-yogh>n.요호(중세 영어의 자모)
-yoghourt>n.요구르트
-yoghurt>n.요구르트
-yogi>n.요가수도자
-yogism>n.요가의 수행
-yogurt>n.요구르트
-yoicks>int.vi.쉿(하고 소리치다) vt.쉿 하고 부추기다
-yoke>n.지배
-yoke bone>광대뼈
-yokefellow>n.(일따위의)동료
-yokel>n.촌놈
-yokelines>I57<1
-yokemate>n.=yokefellow
-yolk>n.노른자위
-yolky>adj.노른자위의
-yon>adj.ad.pron.=yonder
-yond>adj.ad.pron.=yonder
-yonder>a.저쪽의 ad.저쪽에 pron.저쪽에 있는 것
-yore>ad.옛날 옛적
-york>n.요크
-yorker>n.(크리켓)배트의 바로 밑에 떨어지게 떨어진 공
-you>pron.당신
-young>a.젊은
-youngberry>n.검은 딸기
-younger>adj.(형제,자매에서)연하쪽의 n.(보통)젊은이
-youngest>n.최연소자
-youngish>a.다소(아직)젊은
-youngling>n.애송이
-youngster>n.소년
-younker>n.젊은이
-your>pron.당신의
-yours>pron.당신의 것
-yourself>pron.당신 자신
-youth>n.청년
-youthful>a.젊은
-zygote>n.접합자(체)
-zymase>n.치마아제
-zyme>n.전염병의 병원체
-zymogen>n.치모겐
-zymogenic>n.발효를 일으키는
-zymologist>n.발효학자
-zymology>n.발효학
-zymometer>n.발효도 측정계
-zymosimeter>n.발효도 측정계
-zymosis>n.발효
-zymotechnics>n.양조법
-zymotic>adj.발효성의
-zymurgy>n.양조학
+abandoner>n.유기자
+abandonment>n.포기
+abas>n.(그리스 신화)아바스
+abase>vt.(품격 등을)떨어뜨리다
+abasement>n.(품위의)실추
+abash>vt.무안하게 하다
+abashment>n.수치
+abate>vt.줄이다
+abatement>n.인하
+abatis>n.녹채
+abattis>n.녹채
+abattoir>n.(공설)도살장
+abb>n.애브(저급 털 섬유)
+butterbur>n.머위
+buttercup>n.미나리아재비
+butterfat>n.유지방(우유의 지방
+butterfingers>n.공을 잘 떨어뜨리는 사람
+butterfish>n.미끈거리는 물고기(미꾸라지 따위)
+butterfly>n.나비
+butterfly stroke>접영
+butterine>n.인조 버터
+buttermilk>n.버터밀크(버터를 빼낸 뒤의 우유)
+butternut>n.호두(나무)의 일종
+butterscotch>n.버터를 넣은 캔디
+butterwort>n.벌레잡이제비꽃
+buttery>a.버터와 같은
+buttock>n.엉덩이의 한쪽 살 vt.허리치기로 돌리다
+button>n.단추 vt.단추를 채우다 vi.단추로 채워지다
+button up>단추로 꼭 채우다
+buttonball>n.=button wood
+buttonhole>단추 구멍
+buttonhook>n.단추걸이(구두 따위의 단추를 끼는 고리)
+buttonwood>n.플라타너스
+buttony>a.단추 같은
+buttress>n.버팀벽
+butty>n.초산부틸
+butyl>n.바틸기
+butyric>a.버터의(에서 빼낸)
+buxom>a.(여성이)포동포동하고 예쁜
+buy>vt.사다
+buy back>되사다
+buy in>사다
+buy it>집어치우다
+buy off>해방시키다
+buy out>~을 매점하다
+buy over>~을 매수하다
+buy up>~을 매점하다
+buyable>a.살 수 있는
+buyer>n.사는 사람
+buzz>n.윙윙거리는 소리
+buzzard>n.말똥가리
+buzzer>n.윙윙거리는 벌레
+by>ad.곁에
+by bus>버스를 타고
+by oneself>저절로
+by the way>그런데
+bye>int.안녕 a.종속적인
+bygone>a.지나간
+bylaw>n.(지방단체,회사 등의)규칙
+byliner>n.서명 기능사(의 집필자(기자))
+byname>n.first name에 대하여
+bypass>n.바이패스
+bypast>a.지나가버린
+bypath>n.샛길
+byplay>n.부수적인 연기
+byplot>n.(소설 희곡 등의)곁줄거리
+byre>n.외양간(cowshed)
+byroad>n.샛길
+byssinosis>n.면섬유의 흡입성 폐렴(솜의 먼지를 흡입하여 생김)
+byssus>n.고대의 사베(미이라 따위를 싼)
+bystander>n.방관자
+bystreet>n.뒷골목
+byte>n.바이트(정보단위로서 8bit와 같음)
+byway>n.샛길
+byword>n.속담
+bywork>n.부업
+Byzantine>비잔티움 의   복잡한
+c.i.a>dj. 중앙정보부(=Central Intelligence Agency)
+c.o.d.>화학적 산소요구량(Chemical Oxygen Demand)
+cab>n.택시
+cabal>vi.음모를 꾸미다
+cabala>n.히브리 신비철학
+cecal>adj.맹장의
+cecum>n.맹장
+cedar>n.서양삼나무
+cedarbird>n.황여새
+cedarn>adj.삼목의
+cede>vt.(권리를)양도하다
+cedilla>n.세딜라(c아래 붙여 s음을 나타내는 부호)
+cee>n.C의 글자
+dispersal>n.(개체의)산포
+disperse>vt.흩뜨리다
+dispersed>adj.분산한
+dispersedly>ad.분산하여
+dispersion>n.산포
+dispersive>adj.흩뜨리는
+dispirit>vt.기를 꺾다
+dispiteous>a.무자비한
+displace>vt.바꾸어놓다
+displacement>n.바꿔놓음
+display>vt.보이다
+display status>(지위,신분)을 과시하다
+displease>vt.불쾌하게 하다
+displeasing>a.불쾌한
+displeasure>n.불쾌
+displume>vt.-의 깃털을 뽑다
+disport>vt.vi.흥겹게 놀다
+disposable>a.처분할 수 있는
+disposal>n.처분
+dispose>vt.배열하다
+dispose of>-을 처분하다
+disposed>…할 생각이 있는, 마음이 내키는
+disposition>n.배치
+dispossess>vt.빼앗다
+dispossession>n.횡령
+dispraise>vt.트집잡다
+disproof>n.반증
+falsetto>n.가성
+falsework>n.비계
+falsies>n.유방 패드
+falsifier>n.위조자
+falsify>vt.vi.위조하다
+falsity>n.허위
+faltboat>n.접게 된 보트
+falter>vi.비틀거리다
+faltering>a.비틀거리는
+falteringly>ad.비틀거리게
+fame>n.명성
+famed>a.유명한
+familiar>a.친한
+familiarise>vt.친하게 하다
+familiarity>n.친교
+familiarize>vt.친하게 하다
+familiarly>ad.친하게
+family>n.가족
+famine>n.기근
+famish>vt.굶주리게 하다 vi.굶주리다
+famous>a.유명한
+famously>ad.유명하게
+famuli>n.유명하게
+famulus>n.(마술사,학자 등의)부하
+fan>n.(영화 등의)팬
+fan out>(부채꼴로)펼쳐지다
+fanatic>a.열광적인 n.열광자
+fanatical>adj.광신적인
+fanaticism>n.열광
+fancied>a.상상의
+fancier>n.(동물)애호가
+fanciful>a.공상적인
+fancifully>ad.공상적으로
+fancy>n.공상
+fancywork>n.수예(품)
+fandango>n.3박자의 스페인 무용의 일종
+fane>n.신전
+fanfare>n.화려한 취주
+fanfaronade>n.흰소리
+fanfold>n.복사장
+fang>n.엄니
+girder>n.도리,대들보
+girdle>n.띠
+girl>n.소녀
+girl socut>걸스카우트
+girlhood>n.소녀임
+girlie>n.아가씨
+girlish>a.소녀의
+giro>n.(유럽의)지로제
+girt>vt.gird의 과거(분사) n.둘레의 치수
+girth>n.끈
+gist>n.요점
+gittern>n.기타와 비슷한 옛 현악기
+give>vt.주다
+give a piece of cake>케익 한조각을 주다
+give away>남에게 주다
+give back>돌려주다
+give birth to>(아길를) 낳다
+give in>항복하다
+give off>내다
+give out>배포하다
+give up>그만두다
+giveaway>n.입밖에 냄
+given>vt.give의 과거분사 a.주어진
+given name>(성에 대한)이름
+giver>n.주는 사람
+gizzard>n.모래주머니
+glabrous>a.털이 없는
+glace>a.반드럽고 윤이 나는
+glacial>a.얼음의
+glacialist>n.빙하학자
+glaciate>vt.얼리다
+glaciated>adj.얼음으로(빙하로) 덮인
+glaciation>n.빙결
+glacier>n.빙하
+glaciology>n.빙하학
+glacis>n.느린 경사
+glad>a.기쁜
+gladden>vt.기쁘게 하다 vi.기뻐하다
+glade>n.숲사이의 빈터
+gladiator>n.고대로마의 투사
+gladiola>n.=gladiolus
+gladioli>n.pl.글라디올러스
+gladiolus>n.글라디올러스
+gladly>ad.기꺼이
+gladness>n.기쁨
+hoarstone>n.유사 이전의 경계 푯돌
+hoary>adj.(늙어서)희어진
+hoax>vt.골탕을 먹이다
+hob>n.벽난로의 양쪽 시령
+hobbadehoy>n.눈치 없는 청년
+hobble>vt.절뚝거리다
+hobby>n.취미
+hobbyhorse>n.모리스춤
+hobgoblin>n.꼬마귀신
+hobnail>n.(구두창에 박는)대가리가 큰 징
+hobnob>vi.흉허물없이 함께마시다
+hobo>n.부랑자
+hobson's choice>n.주어진 것을 갖느냐 안 갖느냐의 선택
+hock>n.(개,말 등의 뒷다리의)무릎
+hockey>n.하키
+hockshop>n.전당포(=pawnshop)
+hocus>vt.속이다
+hod>n.벽돌나르는 상자
+hodden>n.무늬없는
+hodman>n.(=hod carrier)남의일을거드는사람
+hodometer>n.(=odometer)
+hoe>n.괭이
+hoecake>n.옥수수 빵
+hoedown>n.활발하고 경쾌한 춤
+hog>n.돼지
+hogback>n.돼지의 등처럼
+hogfish>n.식용 물고기의 일종
+hoggery>n.양돈장
+hogget>n.한 살짜리(한습)양
+hoggish>adj.돼지같은
+hogmanay>n.섣달 그믐날
+hogshead>n.큰통
+hogtie>vt.동물의 네발을 묶다
+hogwash>n.돼지 먹이
+hoick>v.번쩍들다
+hoicks>int.쉬쉿(사냥개를 부추기는 소리)
+hoiden>n.말괄량이 adj.수선스러운 vi.말괄량이로 굴다
+hoik>v.번쩍들다
+hoist>vt.올리다
+hokum>n.(연극,영화에서)관객의 감동을 노린 수
+hold>vt.손에 갖고 있다
+hold back>말리다
+hold down>억누르다
+hold good>유효하다
+hold off>멀리하다
+hold on>계속(지속)하다
+hold out>제출하다
+inflorescence>n.꽃이 핌
+inflorescent>adj.꽃이 피어있는
+inflow>n.유입물
+influence>n.영향력
+influent>a.흘러들어가는
+influential>a.영향을 미치는
+influenza>n.유행성감기
+influx>n.유입
+info>n.정보(=information)
+infold>vt.싸다
+inform>vt.알리다
+inform against>밀고하다
+informal>a.비공식의
+informality>n.비공식
+informally>ad.비공식적으로
+informant>n.통지자
+information>n.통지
+informational>adj.정보를 제공하는
+informative>a.정보의
+informed>a.견문이 넓은
+informer>n.통지자
+infra>ad.아래에
+infra dig>=infra dignitatem 품격을 떨어뜨리는
+infract>vt.범하다
+infraction>n.위반
+infrangible>adj.파괴할 수 없는
+infrared>a.적외선의
+infrastructure>n.하부조직
+infrequence>n.드묾
+infrequency>=infrequence n.드묾
+infrequent>a.드문
+infrequently>ad.가끔씩
+infringe>vt.어기다
+infringe upon>-을 침해하다
+infringement>n.위반
+infuriate>vt.격분시키다
+infuriation>n.격분
+infuse>vt.붓다
+infuser>n.주입자
+infusible>a.주입할 수 있는
+infusion>n.우려내기
+infusorian>adj.적충류의
+ingathering>n.수납
+macrography>n.육안검사
+macromolecule>n.고분자
+macron>n.(모음 위쪽에 붙는)장음부
+macrophysics>n.pl.거시적 물리학
+macroscopic>adj.육안으로 보이는
+macrospore>n.대포자,큰 홀씨
+macula>n.(광석의)반점
+maculae>n.pl.광석의반점
+macular>a.흠(반점)이 있는
+maculate>vt.얼룩지게 하다
+maculation>n.반점이 있음
+mad>a.미친
+madam>n.마님
+madame>n.아씨
+madcap>n.무분별한 사람
+madden>vt.발광시키는
+maddening>a.미치게 하는
+maddeningly>ad.미치게 하는
+madder>n.꼭두서니
+madding>a.발광하는
+made>vt.make의 과거(분사) a.만들어진
+mademoiselle>n.아가씨
+madhouse>n.(옛날의)정신병원
+madly>ad.미친듯이
+madman>n.미친 사람(남자)
+madness>n.광기
+Madonna>성모 마리아  성모 마리아상
+madras>n.마드라스(인도 남동부의 주)
+madrepore>n.녹석(산호의 일종)
+madrigal>n.짧은 연가
+madwoman>n.미친 여자
+madwort>n.=alyssum
+maelstrom>n.큰 소용돌이
+maenad>n.Bacchus의 시녀(bacchante)
+maestoso>ad.adj.장엄한
+nebula>n.성운
+nebular>a.성운(모양)의
+nebulize>vt.안개모양으로 하다 vi.(생각 등이)희미해지다
+nebulosity>n.성무 상태
+nebulous>a.성운(모양)의
+necessarian>n.=necessitarian
+necessarily>ad.반드시
+necessary>a.필요한
+necessitarian>n.숙명론자 a.숙명론의
+necessitarism>n.숙명론
+necessitate>vt.필요로 하다
+necessitous>a.가난한
+necessity>n.필요
+neck>n.목
+neckband>n.셔어츠의 깃
+neckcloth>n.(남자용)목도리
+neckerchief>n.목도리
+necking>n.기둥목도리
+necklace>n.목걸이
+necklet>n.목걸이
+neckline>n.드레스의 목둘레를 판 선
+neckpiece>n.모피 목도리
+neckrein>vi.vt.말고삐로 말의 방향을 바꾸다
+necktie>n.넥타이
+neckwear>n.목도리류
+necrology>n.사망자 명부
+necromancer>n.점장이
+necromancy>n.점
+perpetuate>vt.영속(영존)시키다
+perpetuation>n.영구화
+perpetuator>n.영속자
+perpetuity>n.영속
+perplex>vt.vi.곤혹시키다
+perplexed>a.당황한
+perplexedly>ad.당황하게
+perplexing>adj.당혹한
+perplexity>n.당황
+perquisite>n.(직무상 생기는)임시수입
+perron>n.바깥 층계
+perry>n.배로 빚은 줄
+persecute>vt.박해하다
+persecution>n.종교적 박해
+persecutor>n.박해자
+perseverance>n.인내(력)
+persevere>vt.vi.참다
+persevering>a.참을성 있는
+Persia>페르시아 으로 개칭)
+Persian>페르시아의  페르시아 사람의  페르시아 사람
+persian cat>페르시아 고양이
+persiennes>n.덧문
+persiflage>n.야유
+persimmon>n.감
+persist>vi.고집하다
+persistence>n.고집
+persistency>n.끈덕짐
+persistent>a.고집하는
+persnickety>adj.까다로운
+person>n.사람
+personable>a.모습이 단정한
+personage>n.명사
+personal>a.개인의
+personalism>n.성격주의
+personality>n.개성
+personality cuit>개인 숭배
+personalize>vt.개인화하다
+personally>ad.몸소
+personalty>n.동산
+personate>vt.-의 역을 맡아 하다
+personation>n.역을 맡기
+quiver>vi.흔들리다
+quiverful>n.전동에 그득한 화살
+quiveringly>ad.흔들리듯이
+quixotic>a.돈키호테식의
+quixotically>ad.돈키호테같이
+quixotism>n.돈키호테적인 성격
+quixotry>n.돈키호테적인 성격
+quiz>n.시험
+quizmaster>n.퀴즈의 사회자
+quizzee>n.질문을 받는 사람
+quizzer>n.질문자
+quizzical>a.장난을 치는
+quod>n.감옥
+quodlibet>n.(미묘한)논점
+quoin>n.(건물의)외각
+quoit>n.고리 vt.고리던지기처럼 던지다
+quondam>a.이전의
+quonset hut>반원형 막사
+quorum>n.(의결에 필요한)정족수
+quot.>n.인용
+quota>n.몫
+quotability>n.인용 가치
+quotable>a.인용할 수 있는
+quotation>n.인용
+quotation marks>인용부호
+quotative>adj.인용의
+quote>vt.인용하다
+quoth>vt.말하였다(직설법 1,3인칭 과거형으로 주어앞에)
+quotha>그래 참
+quotidian>a.매일 일어나는
+quotient>I|U
+quotiety>n.율
+R.I.P.>rest in peace
+r.s.v.p.>회답을 바람
+rabbet>n.사개
+rabbi>n.율법박사
+rabbin>n.(=rabbi)
+rabbinical>adj.율법학자의
+rabbinism>n.유태율법주의
+rabbinist>n.랍비 신봉자
+rabbit>n.집토끼
+rabbit hutch>토끼장(상자꼴의)
+rabbit punch>래빗펀치(뒤통수를 치는 반칙)
+rabbit warren>양토장
+rabbitry>n.토끼
+rabbity>adj.토끼같은
+rabble>n.오합지졸
+rabid>a.맹렬한
+rabidity>n.맹렬
+seismography>n.지진관측(법)
+seismological>adj.지진계의
+seismologist>n.지진학자
+seismology>n.지진학
+seismometer>n.지진계
+seismoscope>n.간이지진계
+seizable>adj.잡을 수 있는
+seize>v.붙잡다
+seize on> 을 사로잡다
+seize upon>=seize on
+seizer>n.잡는 사람
+seizin>n.=seisin
+seizing>n.움켜짐
+seizor>n.점유(소유)자
+seizure>n.붙잡음
+sejant>adj.앞발을 세우고 앉은(사자따위)
+sejeant>adj.=sejant
+selah>n.셀라(시편에 자주 나오는 뜻이분명치 않은히브리말)
+selamlik>n.(큰 집의)남자들 방
+seldom>ad.좀처럼 -않는
+select>v.고르다
+selectee>n.징병제에 의해 선발된 응소자
+selection>n.선발
+selective>adj.선택의
+selectivity>n.선택력
+selectman>n.도시행정위원(New England 여러주의)
+selector>n.선택기
+selenic>adj.셀렌의
+selenium>n.셀렌(원소기호 Se,원소번호 34)
+selenograph>n.월면도
+selenographist>n.월리학자
+selenography>n.월리학
+selenology>n.월학
+self>n.자기
+self evident>자명의
+tertiary>a.제 3의
+tertius>adj.제3의
+tervalent>adj.3가의
+terylene>n.테릴렌(폴리에스터 섬유)
+tessellate>vt.(마루,포장도로를)쪽매붙임으로하다 vi.서로꼭맞다
+tessellated>adj.모자이크식의
+tessellation>n.쪽매붙임세공
+tessera>n.(모자이크성의)네모난 대리석
+tesserae>n.tessera의 복수
+test>n.시험
+test out>실지로 시험해 보다
+test tube>시험관에서 만들어낸
+test tube rack>시험관 선반
+testa>n.외종피
+testacean>n.유각 아메바류의
+testaceous>adj.개각이 있는
+testacy>n.유언장이 있음
+testament>n.유언
+testamentary>a.유언의
+testamur>n.시험 합격증
+testate>a.유언을 남기고 죽은(사람)
+testator>n.유언자
+testatrices>n.testatrix의 복수
+testatrix>n.여자유언자
+testee>n.수험자
+tester>n.시험(검사)자
+testes>n.testis의 복수
+testicle>n.고환
+testify>v.증명하다
+testily>ad.성미 급하게
+testimonial>I
+testimony>n.증거
+testiness>n.성미가 급함
+testing>adj.최대한의노력이요구되는
+testis>n.고환
+testosterone>n.테스토스테론(남성호르몬)
+testudinate>adj.거북류의
+testudines>n.testudo의 복수
+testudo>n.(온 몸을 숨기는)거북등딱지 모양의 큰 방패
+testy>a.성마른
+tetanic>adj.파상풍(성)의
+unshakable>adj.흔들 수 없는
+unshakably>ad.부동으로
+unshaken>adj.흔들리지 않는
+unshapely>a.보기흉한
+unsheathe>vt.칼집에서 뽑다
+unship>vt.(뱃짐을)배에서 부리다
+unshod>adj.신발을 신지 않은
+unsight>adj.보지 않은 vt.보이지 않게 하다
+unsighted>adj.보이지 않는
+unsightly>a.추한
+unskilful>adj.서투른
+unskilled>a.숙련되지 않은
+unskillful>adj.서투른
+unskillfully>ad.서투르게
+unsling>vt.(총따위를)(풀어)내리다
+unslung>unsling의 과거,과거분사
+unsnap>vt.느슨하게 하다
+unsnarl>vt.엉클어진 것을 풀다
+unsociability>n.교제를 싫어함
+unsociable>adj.교제를 싫어하는
+unsocial>a.반사회적인
+unsold>adj.팔리지 않는
+unsolder>vt.-의 납때을 벗기다
+unsophisticated>a.소박한
+unsophisticatedness> n.소박함
+unsound>a.건강(건전)치 못한
+unsparing>a.용서없는
+unsparingly>ad.엄하게
+unspeak>vt.=unsay
+unspeakable>a.이루 말할 수 없는
+unspeakableness>n.이루 말할 수 없음
+unspeakably>ad.말할 수 없이
+unspoke>vt.unspeak의 과거
+unspoken>I5U
+unspotted>a.반점(오점)없는
+unstable>a.불안정한
+unstained>adj.더러움이 없는
+unsteadily>ad.불안정하게

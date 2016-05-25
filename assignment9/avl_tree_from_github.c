@@ -300,6 +300,14 @@ void data_init(AvlTree** root){
     fclose(fp);
 }
 
+AvlNode* inorderTraveling(AvlNode* root){
+	if(root != NULL){
+		inorderTraveling(root->left);
+		printf("[%s] ", root->voc.word);
+		inorderTraveling(root->right);
+	}
+}
+
 
 int main( int argc, char **argv ) {
 	AvlTree *tree = NULL;
@@ -309,36 +317,39 @@ int main( int argc, char **argv ) {
 	
 	tree = avl_create();
 	
-	//data_init(&tree);
-	strcpy(voc.word, "aaa");
-	strcpy(voc.meaning, "aaa");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "bbb");
-	strcpy(voc.meaning, "bbb");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "ccc");
-	strcpy(voc.meaning, "ccc");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "ddd");
-	strcpy(voc.meaning, "ddd");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "eee");
-	strcpy(voc.meaning, "eee");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "fff");
-	strcpy(voc.meaning, "fff");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "ggg");
-	strcpy(voc.meaning, "ggg");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "hhh");
-	strcpy(voc.meaning, "hhh");
-	AvlInsert( tree, voc );
-	strcpy(voc.word, "iii");
-	strcpy(voc.meaning, "iii");
-	AvlInsert( tree, voc );	
-	printf("-----from here search start--------\n");
-	AvlFind(tree, "ccc");
+	data_init(&tree);
+	char cmd[5], keyword[50];
+	while(1){
+		printf("-----------------------------------\n"); 
+		printf("1. 단어 추가\n");
+		printf("2. 단어 검색\n");
+		printf("3. 단어 목록 내림차순으로 보기\n");
+		printf("4. 종료\n");
+		printf("-----------------------------------\n");
+		scanf("%s", cmd);
+		if(strcmp(cmd, "1") == 0){
+			printf("Input the word : ");
+			scanf("%s", voc.word);
+			printf("Input the meaning : ");
+			scanf("%s", voc.meaning);
+			AvlInsert(tree, voc);
+		}
+		if(strcmp(cmd,"2") == 0){
+			printf("Input the keyword : ");
+			scanf("%s", keyword);
+			printf("-----from here search start--------\n");
+			AvlFind(tree, keyword);
+			
+			
+		}
+		if(strcmp(cmd,"3") == 0){
+			inorderTraveling(tree->root);
+		}
+		if(strcmp(cmd,"4") == 0){
+			break;
+		}
+	} 
+	
 	
 	//avl_traverse_dfs( tree );
 
