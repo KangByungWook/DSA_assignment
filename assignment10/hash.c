@@ -13,7 +13,7 @@ typedef struct element{
 	char key;
 	int value;
 	element_ptr left_child, right_child;
-	 
+	int is_leaf;
 }element;
 
 
@@ -95,7 +95,7 @@ void insert_element(HeapType *h, element_ptr e_ptr){
 	
 }
 
-void delete_node(HeapType *h){
+element_ptr delete_node(HeapType *h){
 	element_ptr tmp;
 	int index = 1;
 	// 초기화 과정
@@ -107,8 +107,6 @@ void delete_node(HeapType *h){
 	while(1){
 		// left node의 value가 자신보다 작은 경우 
 		if(index * 2 <= h->heap_size && (h->heap[index])->value > (h->heap[index*2])->value && (h->heap[index*2])->value < (h->heap[index*2 + 1])->value ){
-			// TODO 여기서 문제발생
-			// 아래처럼 +1을 붙이면 에러발생 안하는데 왜그런지 모르겠다. 
 			swap(h->heap + index, h->heap + index*2);
 			index *= 2;
 		}
@@ -121,13 +119,61 @@ void delete_node(HeapType *h){
 		else break;
 		
 	}
-	
+	return tmp;
+}
+
+element_ptr get_root_node(HeapType *h) {
+	// 힙이 다 빌때까지 두개씩 빼가면서 트리를 만든다.
+	if (h->heap_size == 0) {
+		printf("Heap empty!!\n");
+		exit(1);
+	}
+	while (h->heap_size > 1) {
+		element_ptr new_node = (element_ptr)malloc(sizeof(element));
+		element_ptr left_node_ptr = delete_node(h);
+		element_ptr right_node_ptr = delete_node(h);
+		new_node->left_child = left_node_ptr;
+		new_node->right_child = right_node_ptr;
+		new_node->value = left_node_ptr->value + right_node_ptr->value;
+		new_node->is_leaf = FALSE;
+		
+		insert_element(h, new_node);
+	}
+	return h->heap[1];
 }
 
 
+void PrintTree(element_ptr h, int i, char *pCode)
+{
+	if (h)
+	{
+		i++;
+		pCode[i] = '1';
+		PrintTree(h->left_child, i, pCode);
+		pCode[i] = '0';
+		PrintTree(h->right_child, i, pCode);
+		pCode[i] = '\0';
+
+		if (h->left_child == NULL && h->right_child == NULL)
+		{
+			printf("%3c\t%3d\t%s\n", h->key, h->value, pCode);
+		}
+	}
+}
+
 int main(){
-	element tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9;
+	element tmp = { 'a', 278, NULL, NULL, TRUE },
+			tmp2 = { 'b', 42, NULL, NULL, TRUE },
+			tmp3 = { 'c', 65, NULL, NULL, TRUE },
+			tmp4 = { 'd', 745, NULL, NULL, TRUE },
+			tmp5 = { 'e', 34, NULL, NULL, TRUE },
+			tmp6 = { 'f', 65, NULL, NULL, TRUE },
+			tmp7 = { 'g', 35, NULL, NULL, TRUE },
+			tmp8 = { 'h', 97, NULL, NULL, TRUE },
+			tmp9 = { 'i', 65, NULL, NULL, TRUE };
+	
 	int i;
+	char binaryCode[100];
 	tmp.key = 'a';
 	tmp.value = 2;
 	hash_table_insert(hash_table, tmp);
@@ -136,35 +182,39 @@ int main(){
 	
 	HeapType *Heap_ptr = (HeapType*)malloc(sizeof(HeapType));
 	init(Heap_ptr);
-	element_ptr tmp_ptr = &tmp;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp1.value = 12;
-	tmp_ptr = &tmp1;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp2.value = 65;
-	tmp_ptr = &tmp2;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp3.value = 72;
-	tmp_ptr = &tmp3;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp4.value = 31;
-	tmp_ptr = &tmp4;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp5.value = 35;
-	tmp_ptr = &tmp5;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp6.value = 87;
-	tmp_ptr = &tmp6;
-	insert_element(Heap_ptr, tmp_ptr);
-	tmp7.value = 43;
-	tmp_ptr = &tmp7;
-	insert_element(Heap_ptr, tmp_ptr);
+	element_ptr p_elenment = &tmp;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp2;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp3;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp4;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp5;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp6;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp7;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp8;
+	insert_element(Heap_ptr, p_elenment);
+	p_elenment = &tmp9;
+	insert_element(Heap_ptr, p_elenment);
+
+	
 	 
 	printf("\n--------\n");
-	for(i = 0 ; i <= Heap_ptr->heap_size; i++){
+	for(i = 1 ; i <= Heap_ptr->heap_size; i++){
 		printf("%d ", (Heap_ptr->heap[i])->value);
 	}
 	
 	delete_node(Heap_ptr);
 	
+	element_ptr root = get_root_node(Heap_ptr);
+
+	printf("value : %d\n", (root->left_child)->value);
+
+	PrintTree(root, -1, binaryCode);
+	system("pause");
+	return 0;
 }
