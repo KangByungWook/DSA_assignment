@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_CHAR 10
-#define MAX_ELEMENT 100
-#define MAX_HEAP_SIZE 100 
+#define MAX_ELEMENT 10000
+#define MAX_HEAP_SIZE 10000 
 #define TRUE 1
 #define FALSE 0
 
@@ -36,15 +36,29 @@ int transform(char key){
 	return number;
 }
 
-// element변수를 받아서 hash_table에 들어갈 위치를 반환해주는 함수 
-int hash(element e){
+// element변수를 받아서 hash_table에 들어있는 위치를 반환해주는 함수 
+int find_location_with_element(element e){
 	return transform(e.key) % MAX_ELEMENT;
 }
+
+int find_location_with_key(element hash_table[], char key) {
+	int index = transform(key) % MAX_ELEMENT;
+	while (hash_table[index].key != key) {
+		index++;
+		index %= MAX_ELEMENT;
+		if (index == transform(key) % MAX_ELEMENT) {
+			//printf("해당 key를 갖는 element가 없습니다.\n");
+			return -1;
+		}
+	}
+	return index;
+}
+
 
 // element변수를 hash테이블에 삽입하는 함수 
 void hash_table_insert(element table[], element e){
 	// 해당 element변수가 들어갈 위치를 판단 
-	int index = hash(e);
+	int index = find_location_with_element(e);
 	// 해당 위치에 있는 변수의 key값이 삽입하려는 element의 key값과 같을때 중복오류 발생시킴 
 	if(table[index].key == e.key){
 		printf("key duplicated\n");
@@ -55,7 +69,7 @@ void hash_table_insert(element table[], element e){
 		index  = (index+1) % MAX_ELEMENT;
 		
 		// 만약 처음자리로 다시 되돌아왔다면 테이블이 꽉차있다는 의미이므로 오류 메시지 출력후 프로그램 종료. 
-		if(index == hash(e)){
+		if(index == find_location_with_element(e)){
 			printf("hash table is full\n");
 			exit(1);
 		}
@@ -80,15 +94,26 @@ void swap(element_ptr *a, element_ptr *b){
 }
 
 // HeapType heap배열의 적절한 위치에 element 변수를 삽입하는 함수 
-void insert_element(HeapType *h, element_ptr e_ptr){
+void insert_element_to_heap(HeapType *h, element_ptr e_ptr){
 	int i = ++h->heap_size;
 	h->heap[i] = e_ptr;
 	
+	/*if (i != 1 && i % 2 == 1) {
+		if ((h->heap[i - 1])->value > (h->heap[i])->value) {
+			swap(h->heap + i - 1, h->heap + i);
+		}
+	}*/
+
 	while(i != 1){
+		
 		// 만약 부모 노드의 value값(빈도수)이 더 크면 부모노드와 위치를 바꾼다 
 		if((h->heap[i])->value < (h->heap[i/2])->value){
 			swap(h->heap + i, h->heap + i/2);
 			i/=2;
+			
+			
+
+			
 		}
 		else break;
 	}
@@ -137,7 +162,7 @@ element_ptr get_root_node(HeapType *h) {
 		new_node->value = left_node_ptr->value + right_node_ptr->value;
 		new_node->is_leaf = FALSE;
 		
-		insert_element(h, new_node);
+		insert_element_to_heap(h, new_node);
 	}
 	return h->heap[1];
 }
@@ -162,59 +187,77 @@ void PrintTree(element_ptr h, int i, char *pCode)
 }
 
 int main(){
-	element tmp = { 'a', 278, NULL, NULL, TRUE },
-			tmp2 = { 'b', 42, NULL, NULL, TRUE },
-			tmp3 = { 'c', 65, NULL, NULL, TRUE },
-			tmp4 = { 'd', 745, NULL, NULL, TRUE },
-			tmp5 = { 'e', 34, NULL, NULL, TRUE },
-			tmp6 = { 'f', 65, NULL, NULL, TRUE },
-			tmp7 = { 'g', 35, NULL, NULL, TRUE },
-			tmp8 = { 'h', 97, NULL, NULL, TRUE },
-			tmp9 = { 'i', 65, NULL, NULL, TRUE };
-	
+	printf("------------파일 입출력---------------\n");
+	FILE *fp = fopen("text.txt", "r");
+	char c;
+	int element_location;
+	while ((c = fgetc(fp)) != EOF) {
+		printf("%c", c);
+		if ((element_location = find_location_with_key(hash_table, c)) == -1) {
+			element will_be_inserted_element = {c,1,NULL,NULL,TRUE};
+			hash_table_insert(hash_table, will_be_inserted_element);
+		}
+		else {
+			hash_table[element_location].value++;
+		}
+	}
+	fclose(fp);
+	/*element tmp = { 'a', 67, NULL, NULL, TRUE },
+			tmp2 = { 'b', 100, NULL, NULL, TRUE },
+			tmp3 = { 'c', 45, NULL, NULL, TRUE },
+			tmp4 = { 'd', 32, NULL, NULL, TRUE },
+			tmp5 = { 'e', 1111, NULL, NULL, TRUE },
+			tmp6 = { 'f', 456, NULL, NULL, TRUE },
+			tmp7 = { 'g', 895, NULL, NULL, TRUE },
+			tmp8 = { 'h', 123, NULL, NULL, TRUE },
+			tmp9 = { 'i', 72, NULL, NULL, TRUE };
+	*/
 	int i;
 	char binaryCode[100];
-	tmp.key = 'a';
-	tmp.value = 2;
-	hash_table_insert(hash_table, tmp);
-	printf("%d\n", hash(tmp));
-	printf("%d", hash_table[hash(tmp)].value);
+	/*hash_table_insert(hash_table, tmp);
+	hash_table_insert(hash_table, tmp2);
+	hash_table_insert(hash_table, tmp3);
+	hash_table_insert(hash_table, tmp4);
+	hash_table_insert(hash_table, tmp5);
+	hash_table_insert(hash_table, tmp6);
+	hash_table_insert(hash_table, tmp7);
+	hash_table_insert(hash_table, tmp8);
+	hash_table_insert(hash_table, tmp9);*/
+
+	for (i = 0; i < MAX_ELEMENT; i++) {
+		if (hash_table[i].key) {
+			printf("key : %c, value: %d\n", hash_table[i].key, hash_table[i].value);
+		}
+		
+	}
+
 	
 	HeapType *Heap_ptr = (HeapType*)malloc(sizeof(HeapType));
 	init(Heap_ptr);
-	element_ptr p_elenment = &tmp;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp2;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp3;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp4;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp5;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp6;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp7;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp8;
-	insert_element(Heap_ptr, p_elenment);
-	p_elenment = &tmp9;
-	insert_element(Heap_ptr, p_elenment);
 
+
+	for (i = 0; i < MAX_ELEMENT; i++) {
+		if (hash_table[i].key) {
+			printf("키를 찾았습니다 %c\n", hash_table[i].key);
+			insert_element_to_heap(Heap_ptr, hash_table+i);
+		}
+	}
 	
 	 
-	printf("\n--------\n");
+	printf("\n----힙 배열 ----\n");
 	for(i = 1 ; i <= Heap_ptr->heap_size; i++){
 		printf("%d ", (Heap_ptr->heap[i])->value);
 	}
-	
+	printf("\n");
 	delete_node(Heap_ptr);
 	
 	element_ptr root = get_root_node(Heap_ptr);
 
-	printf("value : %d\n", (root->left_child)->value);
+	
 
 	PrintTree(root, -1, binaryCode);
+
+	
 	system("pause");
 	return 0;
 }
