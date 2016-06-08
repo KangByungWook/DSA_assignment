@@ -14,6 +14,7 @@ typedef struct element{
 	int value;
 	element_ptr left_child, right_child;
 	int is_leaf;
+	char bincode[100];
 }element;
 
 
@@ -168,20 +169,21 @@ element_ptr get_root_node(HeapType *h) {
 }
 
 
-void PrintTree(element_ptr h, int i, char *pCode)
+void get_binary_code_and_save(element_ptr h, int i, char *pCode)
 {
 	if (h)
 	{
 		i++;
 		pCode[i] = '1';
-		PrintTree(h->left_child, i, pCode);
+		get_binary_code_and_save(h->right_child, i, pCode);
 		pCode[i] = '0';
-		PrintTree(h->right_child, i, pCode);
+		get_binary_code_and_save(h->left_child, i, pCode);
 		pCode[i] = '\0';
 
-		if (h->left_child == NULL && h->right_child == NULL)
+		if (h->left_child == NULL && h->right_child == NULL && h->is_leaf == TRUE)
 		{
 			printf("%3c\t%3d\t%s\n", h->key, h->value, pCode);
+			strcpy(h->bincode,pCode);
 		}
 	}
 }
@@ -201,29 +203,10 @@ int main(){
 			hash_table[element_location].value++;
 		}
 	}
-	fclose(fp);
-	/*element tmp = { 'a', 67, NULL, NULL, TRUE },
-			tmp2 = { 'b', 100, NULL, NULL, TRUE },
-			tmp3 = { 'c', 45, NULL, NULL, TRUE },
-			tmp4 = { 'd', 32, NULL, NULL, TRUE },
-			tmp5 = { 'e', 1111, NULL, NULL, TRUE },
-			tmp6 = { 'f', 456, NULL, NULL, TRUE },
-			tmp7 = { 'g', 895, NULL, NULL, TRUE },
-			tmp8 = { 'h', 123, NULL, NULL, TRUE },
-			tmp9 = { 'i', 72, NULL, NULL, TRUE };
-	*/
+	fseek(fp, 0, SEEK_SET);
 	int i;
 	char binaryCode[100];
-	/*hash_table_insert(hash_table, tmp);
-	hash_table_insert(hash_table, tmp2);
-	hash_table_insert(hash_table, tmp3);
-	hash_table_insert(hash_table, tmp4);
-	hash_table_insert(hash_table, tmp5);
-	hash_table_insert(hash_table, tmp6);
-	hash_table_insert(hash_table, tmp7);
-	hash_table_insert(hash_table, tmp8);
-	hash_table_insert(hash_table, tmp9);*/
-
+	
 	for (i = 0; i < MAX_ELEMENT; i++) {
 		if (hash_table[i].key) {
 			printf("key : %c, value: %d\n", hash_table[i].key, hash_table[i].value);
@@ -245,19 +228,55 @@ int main(){
 	
 	 
 	printf("\n----힙 배열 ----\n");
-	for(i = 1 ; i <= Heap_ptr->heap_size; i++){
+	for(i = 1 ; i <= Heap_ptr->heap_size ; i++){
 		printf("%d ", (Heap_ptr->heap[i])->value);
 	}
 	printf("\n");
-	delete_node(Heap_ptr);
+	
 	
 	element_ptr root = get_root_node(Heap_ptr);
 
 	
 
-	PrintTree(root, -1, binaryCode);
+	get_binary_code_and_save(root, -1, binaryCode);
 
-	
+	printf("----바이너리코드 테스트-----\n");
+	for (i = 0; i < MAX_ELEMENT; i++) {
+		if (hash_table[i].key) {
+			printf("key : %c, binaryCode: %s\n", hash_table[i].key, hash_table[i].bincode);
+		}
+
+	}
+
+	// 파일 출력부분(바이너리화)
+	FILE *compressed = fopen("compressed.txt", "w");
+	int loc;
+	while ((c = fgetc(fp)) != EOF) {
+		loc = find_location_with_key(hash_table, c);
+		fprintf(compressed, hash_table[loc].bincode);
+	}
+	fclose(fp);
+	fclose(compressed);
+
+	// 디코드
+	FILE *decompressed = fopen("decompressed.txt", "w");
+	FILE *read_compressed = fopen("compressed.txt", "r");
+	element_ptr tmp = root;
+	while ((c = fgetc(read_compressed)) != EOF) {
+		if (c == '0') {
+			tmp = tmp->left_child;
+		}
+		else if (c == '1') {
+			tmp = tmp->right_child;
+		}
+
+		if (tmp->is_leaf == TRUE) {
+			fputc(tmp->key, decompressed);
+			tmp = root;
+		}
+	}
+	fclose(decompressed);
+	fclose(read_compressed);
 	system("pause");
 	return 0;
 }
