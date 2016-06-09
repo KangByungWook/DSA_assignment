@@ -99,22 +99,11 @@ void insert_element_to_heap(HeapType *h, element_ptr e_ptr){
 	int i = ++h->heap_size;
 	h->heap[i] = e_ptr;
 	
-	/*if (i != 1 && i % 2 == 1) {
-		if ((h->heap[i - 1])->value > (h->heap[i])->value) {
-			swap(h->heap + i - 1, h->heap + i);
-		}
-	}*/
-
 	while(i != 1){
-		
 		// 만약 부모 노드의 value값(빈도수)이 더 크면 부모노드와 위치를 바꾼다 
 		if((h->heap[i])->value < (h->heap[i/2])->value){
 			swap(h->heap + i, h->heap + i/2);
 			i/=2;
-			
-			
-
-			
 		}
 		else break;
 	}
@@ -156,8 +145,10 @@ element_ptr get_root_node(HeapType *h) {
 	}
 	while (h->heap_size > 1) {
 		element_ptr new_node = (element_ptr)malloc(sizeof(element));
+		// 힙배열에서 노드 두개를 빼서 하나의 트리를 만든다
 		element_ptr left_node_ptr = delete_node(h);
 		element_ptr right_node_ptr = delete_node(h);
+		// 새로 생성한 노드의 child_node에 방금 빼낸 두개의 노드를 연결한다
 		new_node->left_child = left_node_ptr;
 		new_node->right_child = right_node_ptr;
 		new_node->value = left_node_ptr->value + right_node_ptr->value;
@@ -168,18 +159,22 @@ element_ptr get_root_node(HeapType *h) {
 	return h->heap[1];
 }
 
-
+// 힙트리를 읽어서 각각의 알파벳을 바이너리화하는 함수
 void get_binary_code_and_save(element_ptr h, int i, char *pCode)
 {
 	if (h)
 	{
 		i++;
+		// right_child로 갈 경우 바이너리코드에 1을 추가
 		pCode[i] = '1';
 		get_binary_code_and_save(h->right_child, i, pCode);
+		// left_child로 갈 경우 바이너리코드에 0을 추가
 		pCode[i] = '0';
 		get_binary_code_and_save(h->left_child, i, pCode);
+		// 마지막에 널문자 삽입
 		pCode[i] = '\0';
 
+		// leaf노드에 도착했을 경우 pCode를 각 노드의 bincode변수에 저장
 		if (h->left_child == NULL && h->right_child == NULL && h->is_leaf == TRUE)
 		{
 			printf("%3c\t%3d\t%s\n", h->key, h->value, pCode);
@@ -189,94 +184,92 @@ void get_binary_code_and_save(element_ptr h, int i, char *pCode)
 }
 
 int main(){
-	printf("------------파일 입출력---------------\n");
-	FILE *fp = fopen("text.txt", "r");
+	// 원본텍스트파일을 읽기 위한 파일포인터를 생성
+	FILE *original_read = fopen("text.txt", "r");
 	char c;
 	int element_location;
-	while ((c = fgetc(fp)) != EOF) {
-		printf("%c", c);
+	// 원본텍스트파일을 한글자씩 읽어가면서 hash_table에 저장한다
+	while ((c = fgetc(original_read)) != EOF) {
+		// 알파벳에 맞는 hash_table의 적절한 위치에 해당 알파벳이 없는경우 추가
 		if ((element_location = find_location_with_key(hash_table, c)) == -1) {
 			element will_be_inserted_element = {c,1,NULL,NULL,TRUE};
 			hash_table_insert(hash_table, will_be_inserted_element);
 		}
+		// 기존에 존재할 경우 value(빈도값)에 1을 더해준다
 		else {
 			hash_table[element_location].value++;
 		}
 	}
-	fseek(fp, 0, SEEK_SET);
+	// 압축파일을 만들기 위해 원본파일을 다시 처음부터 읽어야하므로
+	// 포인터를 파일의 시작지점으로 옮긴다
+	fseek(original_read, 0, SEEK_SET);
 	int i;
+	// 바이너리문자열을 저장하기 위한 변수생성
 	char binaryCode[100];
 	
-	for (i = 0; i < MAX_ELEMENT; i++) {
-		if (hash_table[i].key) {
-			printf("key : %c, value: %d\n", hash_table[i].key, hash_table[i].value);
-		}
-		
-	}
-
-	
+	// 힙타입의 포인터변수를 동적할당
 	HeapType *Heap_ptr = (HeapType*)malloc(sizeof(HeapType));
+	
+	// 동적할당한 포인터변수를 초기화 한다
 	init(Heap_ptr);
-
-
+	
+	// hash_table을 하나씩 살피면서 
+	// hash_table안에 있는 유효한 element변수를 heap에 넣는다
 	for (i = 0; i < MAX_ELEMENT; i++) {
 		if (hash_table[i].key) {
-			printf("키를 찾았습니다 %c\n", hash_table[i].key);
 			insert_element_to_heap(Heap_ptr, hash_table+i);
 		}
 	}
-	
-	 
-	printf("\n----힙 배열 ----\n");
-	for(i = 1 ; i <= Heap_ptr->heap_size ; i++){
-		printf("%d ", (Heap_ptr->heap[i])->value);
-	}
-	printf("\n");
-	
-	
+	// heap에 있는 element포인터변수를 이용하여 힙트리를 만들고 
+	// 완성된 힙트리의 root노드 포인터를 root 변수에 저장
 	element_ptr root = get_root_node(Heap_ptr);
-
 	
-
+	// 방금 생성한 힙트리를 이용하여 각 알파벳의 고유 바이너리코드를 생성하여 저장한다
 	get_binary_code_and_save(root, -1, binaryCode);
-
-	printf("----바이너리코드 테스트-----\n");
-	for (i = 0; i < MAX_ELEMENT; i++) {
-		if (hash_table[i].key) {
-			printf("key : %c, binaryCode: %s\n", hash_table[i].key, hash_table[i].bincode);
-		}
-
-	}
-
-	// 파일 출력부분(바이너리화)
-	FILE *compressed = fopen("compressed.txt", "w");
+	
+	// 파일 압축
+	// 압축 텍스트 파일을 쓰기 위한 파일포인터 생성
+	FILE *compressed_write = fopen("compressed.txt", "w");
 	int loc;
-	while ((c = fgetc(fp)) != EOF) {
+	// 원본파일을 읽어가며 각 알파벳에 맞는 바이너리문자열을 compressed.txt.dp 출력한다
+	while ((c = fgetc(original_read)) != EOF) {
+		// hash_tabe로 부터 알파벳에 맞는 바이너리문자열을 찾아서 
 		loc = find_location_with_key(hash_table, c);
-		fprintf(compressed, hash_table[loc].bincode);
+		// compressed.txt파일에 출력한다
+		fprintf(compressed_write, hash_table[loc].bincode);
 	}
-	fclose(fp);
-	fclose(compressed);
+	// 열어둔 파일을 닫는다
+	fclose(original_read);
+	fclose(compressed_write);
 
-	// 디코드
-	FILE *decompressed = fopen("decompressed.txt", "w");
-	FILE *read_compressed = fopen("compressed.txt", "r");
+	// 압축파일 디코딩
+	// 디코딩한 텍스트파일을 저장할 파일포인터 생성
+	FILE *decompressed_write = fopen("decompressed.txt", "w");
+
+	// 압축된 파일을 읽기 위한 파일포인터 생성
+	FILE *compressed_read = fopen("compressed.txt", "r");
 	element_ptr tmp = root;
-	while ((c = fgetc(read_compressed)) != EOF) {
+	
+	// 압축된 파일 텍스트를 하나씩 읽어가면서 바이너리코드에 해당하는 알파벳으로 변환
+	while ((c = fgetc(compressed_read)) != EOF) {
+		// 0인 경우 left_child로 이동
 		if (c == '0') {
 			tmp = tmp->left_child;
 		}
+		// 1인 경우 right_child로 이동
 		else if (c == '1') {
 			tmp = tmp->right_child;
 		}
-
+		// 해당 노드가 left_node인 경우 알파벳을 decompressed.txt에 출력하고
 		if (tmp->is_leaf == TRUE) {
-			fputc(tmp->key, decompressed);
+			fputc(tmp->key, decompressed_write);
+			// 노드의 포인터를 root로 바꾼다
 			tmp = root;
 		}
 	}
-	fclose(decompressed);
-	fclose(read_compressed);
+	// 열어준 파일을 닫는다
+	fclose(decompressed_write);
+	fclose(compressed_read);
 	system("pause");
 	return 0;
 }
