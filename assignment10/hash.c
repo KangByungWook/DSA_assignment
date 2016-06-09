@@ -185,7 +185,7 @@ void get_binary_code_and_save(element_ptr h, int i, char *pCode)
 
 int main(){
 	// 원본텍스트파일을 읽기 위한 파일포인터를 생성
-	FILE *original_read = fopen("text.txt", "r");
+	FILE *original_read = fopen("input.txt", "r");
 	char c;
 	int element_location;
 	// 원본텍스트파일을 한글자씩 읽어가면서 hash_table에 저장한다
@@ -229,7 +229,7 @@ int main(){
 	
 	// 파일 압축
 	// 압축 텍스트 파일을 쓰기 위한 파일포인터 생성
-	FILE *compressed_write = fopen("compressed.txt", "w");
+	FILE *compressed_write = fopen("output.txt", "w");
 	int loc;
 	// 원본파일을 읽어가며 각 알파벳에 맞는 바이너리문자열을 compressed.txt.dp 출력한다
 	while ((c = fgetc(original_read)) != EOF) {
@@ -244,10 +244,10 @@ int main(){
 
 	// 압축파일 디코딩
 	// 디코딩한 텍스트파일을 저장할 파일포인터 생성
-	FILE *decompressed_write = fopen("decompressed.txt", "w");
+	FILE *decompressed_write = fopen("recoveredinput.txt", "w");
 
 	// 압축된 파일을 읽기 위한 파일포인터 생성
-	FILE *compressed_read = fopen("compressed.txt", "r");
+	FILE *compressed_read = fopen("output.txt", "r");
 	element_ptr tmp = root;
 	
 	// 압축된 파일 텍스트를 하나씩 읽어가면서 바이너리코드에 해당하는 알파벳으로 변환
