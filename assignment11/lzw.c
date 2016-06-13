@@ -96,19 +96,30 @@ int main() {
 	/////////////////////////////////////////////////
 
 	// input파일 읽어가며 encoding + table 핸들링
+	// encoding
 	FILE* input_fp = fopen("input.txt", "r");
 	
-	TableType t;
-	TableType_ptr t_ptr = &t;
+	TableType encoding_table;
+	TableType_ptr encoding_table_ptr = &encoding_table;
+	init_table(encoding_table_ptr);
 
-	init_table(t_ptr);
+	TableType decoding_table;
+	TableType_ptr decoding_table_ptr = &decoding_table;
+	init_table(decoding_table_ptr);
 	
 	char c;
 	char text[MAX_TEXT_SIZE];
 	int i = 0;
 
+	char tmp[MAX_KEY_SIZE];
+	char tmp2[MAX_KEY_SIZE];
+
+	int encode[1000];
+	int encode_index = 0;
+
+	// 텍스트파일을 문자열 배열로 저장
 	while ((c = fgetc(input_fp)) != EOF) {
-		printf("%c", c);
+		//printf("%c", c);
 		text[i++] = c;
 	}
 	text[i] = '\0';
@@ -126,25 +137,52 @@ int main() {
 			reading_location_char_to_string[1] = '\0';
 			strcat(cmp_text, reading_location_char_to_string);
 			
-			will_be_encoded_index = find_previous_key_location(t_ptr, cmp_text);
+			will_be_encoded_index = find_previous_key_location(encoding_table_ptr, cmp_text);
 			if (will_be_encoded_index != -1) {
 				strcpy(previous_key, cmp_text);
 				reading_location++;
 			}
 			else {
-				insert_table(t_ptr, cmp_text);
-				printf("%d ", find_previous_key_location(t_ptr, previous_key));
+				insert_table(encoding_table_ptr, cmp_text);
+				printf("%d ", find_previous_key_location(encoding_table_ptr, previous_key));
+				encode[encode_index++] = find_previous_key_location(encoding_table_ptr, previous_key);
 				cmp_text[0] = '\0';
 				previous_key[0] = '\0';
 			}
 		}
 		else{
-			printf("%d ", find_previous_key_location(t_ptr, previous_key));
+			// TODO: 바이너리로 저장하는 과정 필요
+			printf("%d ", find_previous_key_location(encoding_table_ptr, previous_key));
+			encode[encode_index++] = find_previous_key_location(encoding_table_ptr, previous_key);
 			break;
 		}
-		
-		
 	}
+
+	//decoding
+	int decode_index = 0;
+	FILE *recoveredinput_write = fopen("recoverdinput.txt", "w");
+	while (decode_index < encode_index) {
+		strcpy(tmp, decoding_table_ptr->table + encode[decode_index]);
+		fprintf(recoveredinput_write, tmp);
+		if (decode_index + 1 == encode_index)break;
+		strcpy(tmp2, decoding_table_ptr->table + encode[decode_index+1]);
+		reading_location_char_to_string[0] = tmp2[0];
+		reading_location_char_to_string[1] = '\0';
+		strcat(tmp, reading_location_char_to_string);
+		insert_table(decoding_table_ptr, tmp);
+
+		/*printf("디코딩한 문자열 %s\n", tmp);
+		printf("decode_index = %d, encode_index = %d\n", decode_index, encode_index);%
+		*/
+		
+		
+		tmp[0] = '\0';
+		tmp2[0] = '\0';
+		decode_index++;
+	}
+
+	fclose(input_fp);
+	fclose(recoveredinput_write);
 	system("pause");
 	
 	return 0;
